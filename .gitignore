@@ -22,3 +22,5 @@ themes.json
 .DS_Store
 /.idea
 /.vscode
+*.xcuserstate
+E-Commerce/E-Commerce.xcodeproj/xcuserdata
