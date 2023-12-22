@@ -65,8 +65,6 @@
 				529B43932B17A26200DA408A /* Widgets */,
 				5272D5062B167D0C004B565A /* AppDelegate.swift */,
 				5272D5082B167D0C004B565A /* SceneDelegate.swift */,
-				5272D50A2B167D0C004B565A /* HomeViewController.swift */,
-				5272D50C2B167D0C004B565A /* HomeViewController.storyboard */,
 				5272D5142B167D12004B565A /* Info.plist */,
 			);
 			path = "E-Commerce";
@@ -145,9 +143,19 @@
 		529B439C2B17A2DC00DA408A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52E07FAD2B35CDE3001808C3 /* Home */,
 				5272D5112B167D12004B565A /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		52E07FAD2B35CDE3001808C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5272D50A2B167D0C004B565A /* HomeViewController.swift */,
+				5272D50C2B167D0C004B565A /* HomeViewController.storyboard */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
