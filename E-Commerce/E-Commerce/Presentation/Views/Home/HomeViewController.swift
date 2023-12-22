@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     var strings: [String] = ["Alpha","Beta","Unlimited","Revised",]
     
@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         tableView.dataSource? = self
+        tableView.reloadData()
     }
     
 }
