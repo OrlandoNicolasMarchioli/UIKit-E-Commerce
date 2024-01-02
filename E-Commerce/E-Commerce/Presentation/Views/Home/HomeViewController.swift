@@ -9,37 +9,57 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet var horizontalTableView: UITableView!
+    @IBOutlet var verticalTableView: UITableView!
     var names: [String] = ["Alpha","Beta","Unlimited","Revised"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //tableView.register(MyCellTableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.dataSource = self
-        tableView.delegate = self
+        horizontalTableView.dataSource = self
+        horizontalTableView.delegate = self
+        verticalTableView.dataSource = self
+        verticalTableView.delegate = self
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
+        verticalTableView.reloadData()
+        horizontalTableView.reloadData()
     }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ horizontalTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return names.count
     }
     
     //What kind of cell you want to return
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCellTableViewCell{
-            let value = names[indexPath.row]
+    func tableView(_ verticalTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = verticalTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCellTableViewCell{
             cell.titleLabel?.text = names[indexPath.row]
             cell.titleLabel?.textColor = .black
-            print(cell.titleLabel?.text)
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
+        
+    }
+    
+    
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
+    func tableView(_ horizontalTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return names.count
+    }
+    
+    //What kind of cell you want to return
+    func tableView(_ horizontalTableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = horizontalTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCellTableViewCell{
+            cell.titleLabel?.text = names[indexPath.row]
+            cell.titleLabel?.textColor = .black
             
             return cell
         } else {
