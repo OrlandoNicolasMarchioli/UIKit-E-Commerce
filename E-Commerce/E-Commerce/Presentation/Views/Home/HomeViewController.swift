@@ -20,7 +20,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         //horizontalTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "collectionCell")
-        verticalTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
+        let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
+        verticalTableView.register(nib, forCellReuseIdentifier: "cell")
         
         //horizontalTableView.dataSource = self
         //horizontalTableView.delegate = self
