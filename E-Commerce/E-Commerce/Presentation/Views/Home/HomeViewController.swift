@@ -13,15 +13,17 @@ class HomeViewController: UIViewController {
     @IBOutlet var verticalTableView: UITableView!
     
     var names: [String] = ["Alpha","Beta","Unlimited","Revised"]
+    var products: [Product] = [Product(image: "vino", name: "Vino toro", type: "bebidas", price: 2500.0),Product(image: "aceituna", name: "Aceitunas sin carozo", type: "frutas", price: 1000.0),Product(image: "cervezaCorona", name: "Cerveza corona 300cc", type: "bebidas", price: 2500),Product(image: "quesoFresco", name: "Queso fresco ", type: "quesos", price: 5460.0),Product(image: "LecheEnteraLaSerenisima", name: "Leche entera 1L", type: "bebidas s/ alcohol", price: 1500),Product(image: "anana", name: "Anana", type: "frutas", price: 750)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        horizontalTableView.register(MyCellTableViewCell.self, forCellReuseIdentifier: "cell")
-        verticalTableView.register(MyCellTableViewCell.self, forCellReuseIdentifier: "cell")
-
-        horizontalTableView.dataSource = self
-        horizontalTableView.delegate = self
+        //horizontalTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "collectionCell")
+        verticalTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //horizontalTableView.dataSource = self
+        //horizontalTableView.delegate = self
         verticalTableView.dataSource = self
         verticalTableView.delegate = self
         
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         verticalTableView.reloadData()
-        horizontalTableView.reloadData()
+        //horizontalTableView.reloadData()
     }
 }
 
@@ -41,26 +43,13 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     //What kind of cell you want to return
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == horizontalTableView {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCellTableViewCell
-            else { return UITableViewCell() }
-            
-            cell.titleLabel?.text = names[indexPath.row]
-            cell.titleLabel?.textColor = .black
-            cell.backgroundColor = UIColor.red
-            return cell
-            
-        } else if tableView == verticalTableView {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCellTableViewCell 
-            else { return UITableViewCell() }
-            
-            cell.titleLabel?.text = names[indexPath.row]
-            cell.titleLabel?.textColor = .black
-            cell.backgroundColor = UIColor.blue
-            return cell
-
-        }
-           
-        return UITableViewCell()
+        let product = products[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HomeTableViewCell
+        else { return UITableViewCell() }
+        
+//        cell.configure(product: products[indexPath.row])
+        cell.itemName?.text = product.name
+        return cell
+        
     }
 }

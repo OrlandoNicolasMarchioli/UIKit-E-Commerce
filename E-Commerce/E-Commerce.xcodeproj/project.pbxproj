@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521853062B48552F001D64A7 /* HomeViewCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853042B48552F001D64A7 /* HomeViewCollectionController.swift */; };
+		521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */; };
+		521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */; };
+		5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */; };
+		5267AA3D2B55B8210049F237 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5267AA3B2B55B8210049F237 /* HomeTableViewCell.xib */; };
+		5267AA412B55B8FC0049F237 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA402B55B8FC0049F237 /* HomeTableViewController.swift */; };
+		5267AA432B55CE4A0049F237 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA422B55CE4A0049F237 /* Product.swift */; };
 		5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D5062B167D0C004B565A /* AppDelegate.swift */; };
 		5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D5082B167D0C004B565A /* SceneDelegate.swift */; };
 		5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D50A2B167D0C004B565A /* HomeViewController.swift */; };
 		5272D50E2B167D0C004B565A /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50C2B167D0C004B565A /* HomeViewController.storyboard */; };
 		5272D5102B167D12004B565A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50F2B167D12004B565A /* Assets.xcassets */; };
 		5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D5112B167D12004B565A /* LaunchScreen.storyboard */; };
-		52E07FAF2B3B6176001808C3 /* MyCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E07FAE2B3B6176001808C3 /* MyCellTableViewCell.swift */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521853042B48552F001D64A7 /* HomeViewCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCollectionController.swift; sourceTree = "<group>"; };
+		521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		5267AA3B2B55B8210049F237 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		5267AA402B55B8FC0049F237 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		5267AA422B55CE4A0049F237 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5272D5032B167D0C004B565A /* E-Commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5272D5062B167D0C004B565A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5272D5082B167D0C004B565A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +39,6 @@
 		5272D50F2B167D12004B565A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5272D5122B167D12004B565A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5272D5142B167D12004B565A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52E07FAE2B3B6176001808C3 /* MyCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellTableViewCell.swift; sourceTree = "<group>"; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5267AA372B55B7540049F237 /* HomeTableView */ = {
+			isa = PBXGroup;
+			children = (
+				5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */,
+				5267AA3B2B55B8210049F237 /* HomeTableViewCell.xib */,
+				5267AA402B55B8FC0049F237 /* HomeTableViewController.swift */,
+			);
+			path = HomeTableView;
+			sourceTree = "<group>";
+		};
 		5272D4FA2B167D0C004B565A = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +144,7 @@
 		529B43992B17A2A200DA408A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5267AA422B55CE4A0049F237 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,11 +177,22 @@
 		52E07FAD2B35CDE3001808C3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5267AA372B55B7540049F237 /* HomeTableView */,
+				52E9851F2B473AC400A8DF04 /* HomeCollectionView */,
 				5272D50A2B167D0C004B565A /* HomeViewController.swift */,
 				5272D50C2B167D0C004B565A /* HomeViewController.storyboard */,
-				52E07FAE2B3B6176001808C3 /* MyCellTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		52E9851F2B473AC400A8DF04 /* HomeCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				521853042B48552F001D64A7 /* HomeViewCollectionController.swift */,
+				521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */,
+				521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */,
+			);
+			path = HomeCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +253,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */,
 				5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */,
 				52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */,
 				5272D5102B167D12004B565A /* Assets.xcassets in Resources */,
+				5267AA3D2B55B8210049F237 /* HomeTableViewCell.xib in Resources */,
 				5272D50E2B167D0C004B565A /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,10 +269,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */,
+				5267AA432B55CE4A0049F237 /* Product.swift in Sources */,
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
-				52E07FAF2B3B6176001808C3 /* MyCellTableViewCell.swift in Sources */,
+				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
+				5267AA412B55B8FC0049F237 /* HomeTableViewController.swift in Sources */,
 				5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */,
+				521853062B48552F001D64A7 /* HomeViewCollectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
