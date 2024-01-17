@@ -59,14 +59,14 @@
             <connections>
                 <outlet property="itemName" destination="mzi-Wr-fIp" id="dQc-FC-gBd"/>
                 <outlet property="itemPrice" destination="1XF-JJ-Wll" id="KKs-a6-HOa"/>
-                <outlet property="itemType" destination="H2p-sc-9uM" id="Geh-kH-ipd"/>
+                <outlet property="itemType" destination="gwU-SM-7or" id="tbS-Bg-sKc"/>
             </connections>
             <point key="canvasLocation" x="-137.40458015267174" y="-23.943661971830988"/>
         </tableViewCell>
     </objects>
     <resources>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
