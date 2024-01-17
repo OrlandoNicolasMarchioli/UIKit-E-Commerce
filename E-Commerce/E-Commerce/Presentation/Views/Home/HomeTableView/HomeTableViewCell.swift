@@ -10,7 +10,7 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     @IBOutlet var itemName: UILabel!
-    @IBOutlet var itemType: UIView!
+    @IBOutlet var itemType: UILabel!
     @IBOutlet var itemPrice: UILabel!
     
     override func awakeFromNib() {
@@ -24,9 +24,11 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    func configure(product: Product){
-//        self.itemName.text = "$ " + product.name
-//    }
+    func configure(product: Product){
+        self.itemName.text = "$ " + product.name
+        self.itemType.text = product.type
+        self.itemPrice.text = String(product.price)
+    }
     
 }
 
