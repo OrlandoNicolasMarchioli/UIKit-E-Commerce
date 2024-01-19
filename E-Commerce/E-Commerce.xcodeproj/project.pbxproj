@@ -18,6 +18,7 @@
 		5272D50E2B167D0C004B565A /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50C2B167D0C004B565A /* HomeViewController.storyboard */; };
 		5272D5102B167D12004B565A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50F2B167D12004B565A /* Assets.xcassets */; };
 		5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D5112B167D12004B565A /* LaunchScreen.storyboard */; };
+		52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		5272D50F2B167D12004B565A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5272D5122B167D12004B565A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5272D5142B167D12004B565A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellCollectionViewCellLayout.swift; path = "E-Commerce/Presentation/Views/Home/HomeCollectionView/MyCellCollectionViewCellLayout.swift"; sourceTree = SOURCE_ROOT; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 		52E9851F2B473AC400A8DF04 /* HomeCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */,
 				521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */,
 				521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */,
 			);
@@ -268,6 +271,7 @@
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
+				52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */,
 				5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

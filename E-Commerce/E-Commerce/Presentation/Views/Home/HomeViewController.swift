@@ -13,15 +13,17 @@ class HomeViewController: UIViewController {
     @IBOutlet var horizontalTableView: UICollectionView!
     @IBOutlet var verticalTableView: UITableView!
     
+    let collectionViewLayout = MyCellCollectionViewCellLayout()
+    
     var products: [Product] = [Product(image: "vino", name: "Vino toro", type: "bebidas", price: 2500.0),Product(image: "aceituna", name: "Aceitunas sin carozo", type: "frutas", price: 1000.0),Product(image: "cervezaCorona", name: "Cerveza corona 300cc", type: "bebidas", price: 2500),Product(image: "quesoFresco", name: "Queso fresco ", type: "quesos", price: 5460.0),Product(image: "LecheEnteraLaSerenisima", name: "Leche entera 1L", type: "bebidas s/ alcohol", price: 1500),Product(image: "anana", name: "Anana", type: "frutas", price: 750)]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
         let collectionNib = UINib(nibName: "MyCellCollectionViewCell", bundle: nil)
+        horizontalTableView.collectionViewLayout = collectionViewLayout
         verticalTableView.register(nib, forCellReuseIdentifier: "cell")
         horizontalTableView.register(collectionNib, forCellWithReuseIdentifier: "collectionCell")
         
@@ -68,6 +70,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         
         cell.configure(product: product)
         return cell
+    }
+    
+    override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
+        return CGSize(width: view.frame.width , height: 250)
     }
     
     

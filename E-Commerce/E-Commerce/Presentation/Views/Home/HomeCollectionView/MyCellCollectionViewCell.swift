@@ -16,12 +16,22 @@ class MyCellCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        contentView.layer.cornerRadius = 10
+        contentView.layer.masksToBounds = true
+        contentView.layer.borderWidth = 1
+        contentView.layer.borderColor = UIColor.lightGray.cgColor
+        
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.2
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        layer.shadowRadius = 5
+        layer.masksToBounds = false
     }
     
     func configure(product: Product){
-        self.itemName.text = "$ " + product.name
-        self.itemPrice.text = String(product.price)
+        self.itemName.text =  product.name
+        self.itemPrice.text = "$ " + String(product.price)
     }
-
+    
 }
