@@ -32,6 +32,11 @@ class MyCellCollectionViewCell: UICollectionViewCell {
     func configure(product: Product){
         self.itemName.text =  product.name
         self.itemPrice.text = "$ " + String(product.price)
+        self.itemImage.image = imageForName(name: product.image)
+    }
+    
+    func imageForName(name: String) -> UIImage?{
+        return UIImage(named: name)
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520D85E52B6161B10088E554 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D85E32B6161B10088E554 /* ChartViewController.swift */; };
+		520D85E62B6161B10088E554 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520D85E42B6161B10088E554 /* ChartViewController.xib */; };
 		521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */; };
 		521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */; };
 		5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520D85E32B6161B10088E554 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		520D85E42B6161B10088E554 /* ChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
 		521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520D85E02B61613E0088E554 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				520D85E32B6161B10088E554 /* ChartViewController.swift */,
+				520D85E42B6161B10088E554 /* ChartViewController.xib */,
+			);
+			path = ChartView;
+			sourceTree = "<group>";
+		};
 		5267AA372B55B7540049F237 /* HomeTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,7 @@
 		52E07FAD2B35CDE3001808C3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				520D85E02B61613E0088E554 /* ChartView */,
 				5267AA372B55B7540049F237 /* HomeTableView */,
 				52E9851F2B473AC400A8DF04 /* HomeCollectionView */,
 				5272D50A2B167D0C004B565A /* HomeViewController.swift */,
@@ -252,6 +266,7 @@
 			files = (
 				521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */,
 				5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */,
+				520D85E62B6161B10088E554 /* ChartViewController.xib in Resources */,
 				52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */,
 				5272D5102B167D12004B565A /* Assets.xcassets in Resources */,
 				5267AA3D2B55B8210049F237 /* HomeTableViewCell.xib in Resources */,
@@ -271,6 +286,7 @@
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
+				520D85E52B6161B10088E554 /* ChartViewController.swift in Sources */,
 				52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */,
 				5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */,
 			);
