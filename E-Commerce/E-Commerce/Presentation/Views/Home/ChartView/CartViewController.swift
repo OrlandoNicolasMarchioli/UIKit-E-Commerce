@@ -7,21 +7,27 @@
 
 import UIKit
 
-class CartViewController: HomeViewController {
+class CartViewController: UIViewController {
+    
     @IBOutlet var cartTableView: UITableView!
+    
     @IBOutlet var itemTotal: UILabel!
     var productsToBuy: [Product] = []
 
     @IBOutlet var confirmButton: UIButton!
+    
 
     @IBOutlet var chartTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        confirmButton.layer.cornerRadius = 10
 
-        confirmButton.layer.cornerRadius = 15
     }
     
 
+    @IBAction func didConfirmButtonTapped(_ sender: Any) {
+    }
     
 }
