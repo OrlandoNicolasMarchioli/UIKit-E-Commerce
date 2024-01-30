@@ -11,7 +11,6 @@ class HomeViewController: UIViewController {
     
     
     @IBOutlet var starButton: UIButton!
-  
     @IBOutlet var cartButton: UIButton!
     @IBOutlet var horizontalTableView: UICollectionView!
     @IBOutlet var verticalTableView: UITableView!
@@ -23,8 +22,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let navigation = self.navigationController
-//        self.navigationController?.navigationBar
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
         let collectionNib = UINib(nibName: "MyCellCollectionViewCell", bundle: nil)
         horizontalTableView.collectionViewLayout = collectionViewLayout
@@ -40,10 +37,7 @@ class HomeViewController: UIViewController {
         cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
         cartButton.setTitle("", for: .normal)
         cartButton.imageView?.contentMode = .scaleAspectFit
-        cartButton.addTarget(self, action: #selector(showChart), for: .touchUpInside)
         cartButton.layer.cornerRadius = 10
-        
-        self.cartButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         
         starButton.setImage(UIImage(systemName: "star"), for: .normal)
         starButton.setTitle("", for: .normal)
@@ -58,17 +52,14 @@ class HomeViewController: UIViewController {
         horizontalTableView.reloadData()
     }
     
-    @objc func showChart() {
-        let chartViewController = ChartViewController()
-        navigationController?.pushViewController(chartViewController, animated: true)
-    }
-    
-    @objc private func didTapButton() {
-        let chartController = ChartViewController()
-        chartController.productsToBuy = products
-        navigationController?.pushViewController(chartController, animated: true)
+    @IBAction func didCartTapButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
+        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
+//        cartController.productsToBuy = products
+        self.present(cartController, animated: true, completion: nil)
         print("Button pressed")
     }
+        
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{

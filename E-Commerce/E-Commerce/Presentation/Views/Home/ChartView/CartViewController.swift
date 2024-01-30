@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChartViewController: HomeViewController {
+class CartViewController: HomeViewController {
     @IBOutlet var cartTableView: UITableView!
     @IBOutlet var itemTotal: UILabel!
     var productsToBuy: [Product] = []
