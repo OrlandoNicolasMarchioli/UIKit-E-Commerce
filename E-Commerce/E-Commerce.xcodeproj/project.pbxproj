@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		520D85E52B6161B10088E554 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D85E32B6161B10088E554 /* ChartViewController.swift */; };
+		520D85E52B6161B10088E554 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D85E32B6161B10088E554 /* CartViewController.swift */; };
 		520D85E62B6161B10088E554 /* ChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520D85E42B6161B10088E554 /* ChartViewController.xib */; };
 		521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */; };
 		521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */; };
@@ -21,11 +21,12 @@
 		5272D5102B167D12004B565A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50F2B167D12004B565A /* Assets.xcassets */; };
 		5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D5112B167D12004B565A /* LaunchScreen.storyboard */; };
 		52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */; };
+		52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		520D85E32B6161B10088E554 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		520D85E32B6161B10088E554 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		520D85E42B6161B10088E554 /* ChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartViewController.xib; sourceTree = "<group>"; };
 		521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		5272D5122B167D12004B565A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5272D5142B167D12004B565A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellCollectionViewCellLayout.swift; path = "E-Commerce/Presentation/Views/Home/HomeCollectionView/MyCellCollectionViewCellLayout.swift"; sourceTree = SOURCE_ROOT; };
+		52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartViewController.storyboard; sourceTree = "<group>"; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,8 +60,9 @@
 		520D85E02B61613E0088E554 /* ChartView */ = {
 			isa = PBXGroup;
 			children = (
-				520D85E32B6161B10088E554 /* ChartViewController.swift */,
+				520D85E32B6161B10088E554 /* CartViewController.swift */,
 				520D85E42B6161B10088E554 /* ChartViewController.xib */,
+				52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */,
 			);
 			path = ChartView;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				520D85E62B6161B10088E554 /* ChartViewController.xib in Resources */,
 				52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */,
 				5272D5102B167D12004B565A /* Assets.xcassets in Resources */,
+				52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */,
 				5267AA3D2B55B8210049F237 /* HomeTableViewCell.xib in Resources */,
 				5272D50E2B167D0C004B565A /* HomeViewController.storyboard in Resources */,
 			);
@@ -286,7 +290,7 @@
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
-				520D85E52B6161B10088E554 /* ChartViewController.swift in Sources */,
+				520D85E52B6161B10088E554 /* CartViewController.swift in Sources */,
 				52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */,
 				5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */,
 			);
