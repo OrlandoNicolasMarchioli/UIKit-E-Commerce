@@ -52,13 +52,13 @@ class HomeViewController: UIViewController {
         horizontalTableView.reloadData()
     }
     
-    @IBAction func didCartTapButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
-        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
-//        cartController.productsToBuy = products
-        self.present(cartController, animated: true, completion: nil)
-        print("Button pressed")
-    }
+//    @IBAction func didCartTapButton(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
+//        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
+////        cartController.productsToBuy = products
+//        self.present(cartController, animated: true, completion: nil)
+//        print("Button pressed")
+//    }
         
 }
 
