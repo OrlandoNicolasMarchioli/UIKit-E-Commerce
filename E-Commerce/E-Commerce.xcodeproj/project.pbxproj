@@ -20,6 +20,7 @@
 		5272D5102B167D12004B565A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5272D50F2B167D12004B565A /* Assets.xcassets */; };
 		5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5272D5112B167D12004B565A /* LaunchScreen.storyboard */; };
 		529E36C92B6991330041EA19 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529E36C82B6991330041EA19 /* DetailViewController.storyboard */; };
+		529E36CB2B69A0D70041EA19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529E36CA2B69A0D70041EA19 /* DetailViewController.swift */; };
 		52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */; };
 		52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
@@ -41,6 +42,7 @@
 		5272D5122B167D12004B565A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5272D5142B167D12004B565A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		529E36C82B6991330041EA19 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
+		529E36CA2B69A0D70041EA19 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellCollectionViewCellLayout.swift; path = "E-Commerce/Presentation/Views/Home/HomeCollectionView/MyCellCollectionViewCellLayout.swift"; sourceTree = SOURCE_ROOT; };
 		52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartViewController.storyboard; sourceTree = "<group>"; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				529E36C82B6991330041EA19 /* DetailViewController.storyboard */,
+				529E36CA2B69A0D70041EA19 /* DetailViewController.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529E36CB2B69A0D70041EA19 /* DetailViewController.swift in Sources */,
 				5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */,
 				5267AA432B55CE4A0049F237 /* Product.swift in Sources */,
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,

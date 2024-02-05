@@ -52,14 +52,14 @@ class HomeViewController: UIViewController {
         horizontalTableView.reloadData()
     }
     
-//    @IBAction func didCartTapButton(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
-//        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
-////        cartController.productsToBuy = products
-//        self.present(cartController, animated: true, completion: nil)
-//        print("Button pressed")
-//    }
-        
+    //    @IBAction func didCartTapButton(_ sender: Any) {
+    //        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
+    //        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
+    ////        cartController.productsToBuy = products
+    //        self.present(cartController, animated: true, completion: nil)
+    //        print("Button pressed")
+    //    }
+    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
@@ -85,6 +85,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return verticalCellSpacing
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedProduct = products[indexPath.row]
+        
+        let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.product = selectedProduct
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -104,6 +114,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     override func size(forChildContentContainer container: UIContentContainer, withParentContainerSize parentSize: CGSize) -> CGSize {
         return CGSize(width: view.frame.width , height: 250)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedProduct = products[indexPath.row]
+        
+        let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        detailVC.product = selectedProduct
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
     
     
 }
