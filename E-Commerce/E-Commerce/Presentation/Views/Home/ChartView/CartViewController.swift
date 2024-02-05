@@ -23,6 +23,9 @@ class CartViewController: UIViewController {
         super.viewDidLoad()
         
         confirmButton.layer.cornerRadius = 10
+        confirmButton.isEnabled = false
+        
+        itemTotal.text = "0"
 
     }
     
