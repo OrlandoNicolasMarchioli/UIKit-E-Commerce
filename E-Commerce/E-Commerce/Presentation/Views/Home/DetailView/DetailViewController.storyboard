@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,9 +35,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-76-uGb">
-                                <rect key="frame" x="185" y="637" width="23" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-76-uGb">
+                                <rect key="frame" x="185" y="636.66666666666663" width="23" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,11 +100,13 @@
                             <constraint firstItem="fzo-Wq-7PN" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="6K3-jV-MSj"/>
                             <constraint firstItem="Udg-wm-q2k" firstAttribute="top" secondItem="2Ql-Ue-ubV" secondAttribute="bottom" constant="32.670000000000002" id="9Ic-6z-Cqs"/>
                             <constraint firstItem="KoN-n0-529" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="GA5-My-Eat"/>
+                            <constraint firstItem="vK9-76-uGb" firstAttribute="centerY" secondItem="skK-KN-O0k" secondAttribute="centerY" id="P5y-L5-6vx"/>
                             <constraint firstItem="aHU-Db-3YB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wq2-wH-Cq3"/>
                             <constraint firstItem="skK-KN-O0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="56" id="Y3N-cD-Dq8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Ql-Ue-ubV" secondAttribute="trailing" constant="50" id="dlz-l4-9Pb"/>
                             <constraint firstItem="Udg-wm-q2k" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ev3-9Y-3s3"/>
                             <constraint firstItem="skK-KN-O0k" firstAttribute="top" secondItem="fzo-Wq-7PN" secondAttribute="bottom" constant="117" id="qUa-x6-LwM"/>
+                            <constraint firstItem="vK9-76-uGb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qxN-4e-DxM"/>
                             <constraint firstItem="aHU-Db-3YB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="u5R-dv-KrN"/>
                         </constraints>
                     </view>
@@ -130,7 +131,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
