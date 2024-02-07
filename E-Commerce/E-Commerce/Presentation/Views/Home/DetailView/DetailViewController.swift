@@ -18,10 +18,13 @@ class DetailViewController: UIViewController{
     @IBOutlet var addToCartButton: UIButton!
     @IBOutlet var lessButton: UIButton!
     @IBOutlet var plusButton: UIButton!
+    var delegate: DetailViewControllerDelegate?
     var product: Product = Product(image: "", name: "", type: "", price: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         productQuantity.text = "0"
         plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
         plusButton.setTitle("", for: .normal)
@@ -52,7 +55,8 @@ class DetailViewController: UIViewController{
         checkAddToChartState()
     }
     @IBAction func addToCart(_ sender: Any) {
-        
+        delegate?.didAddToChart(product: self.product, quantity: Int(productQuantity.text!)!)
+        self.productQuantity.text = ""
     }
     
     private func configure(product: Product){
