@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5202A5CE2B7278AE007A45C8 /* DetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202A5CD2B7278AE007A45C8 /* DetailViewControllerDelegate.swift */; };
 		520D85E52B6161B10088E554 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D85E32B6161B10088E554 /* CartViewController.swift */; };
 		521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */; };
 		521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5202A5CD2B7278AE007A45C8 /* DetailViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerDelegate.swift; sourceTree = "<group>"; };
 		520D85E32B6161B10088E554 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		529B43982B17A29800DA408A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				5202A5CD2B7278AE007A45C8 /* DetailViewControllerDelegate.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */,
 				5267AA432B55CE4A0049F237 /* Product.swift in Sources */,
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
+				5202A5CE2B7278AE007A45C8 /* DetailViewControllerDelegate.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
 				520D85E52B6161B10088E554 /* CartViewController.swift in Sources */,
