@@ -55,8 +55,12 @@ class DetailViewController: UIViewController{
         checkAddToChartState()
     }
     @IBAction func addToCart(_ sender: Any) {
-        delegate?.didAddToChart(product: self.product, quantity: Int(productQuantity.text!)!)
-        self.productQuantity.text = ""
+        guard let quantity = Int(productQuantity.text ?? "0"), quantity > 0 else {
+            return
+        }
+        
+        delegate?.didAddToChart(product: self.product, quantity: quantity)
+        self.productQuantity.text = "0"
     }
     
     private func configure(product: Product){
