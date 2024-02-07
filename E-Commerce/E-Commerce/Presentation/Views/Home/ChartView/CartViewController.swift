@@ -10,21 +10,18 @@ import UIKit
 class CartViewController: UIViewController, DetailViewControllerDelegate {
     
     
+    @IBOutlet var cartEmptyImage: UIImageView!
     @IBOutlet var cartTableView: UITableView!
-    
+    var cartViewController: CartViewController?
     @IBOutlet var itemTotal: UILabel!
     var productsToBuy: [Product] = []
-
     @IBOutlet var confirmButton: UIButton!
-    
-
-    @IBOutlet var chartTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
-        cartTableView.register(nib, forCellReuseIdentifier: "cell")
+        cartTableView.register(nib, forCellReuseIdentifier: "cartCell")
         
         cartTableView.dataSource = self
         cartTableView.delegate = self
@@ -33,10 +30,22 @@ class CartViewController: UIViewController, DetailViewControllerDelegate {
         confirmButton.isEnabled = false
         
         itemTotal.text = "0"
-
+        
+        cartEmptyImage.image = UIImage(named: "cart.fill.badge.plus")
+        if productsToBuy.isEmpty {
+            cartEmptyImage.isHidden = false
+        } else {
+            cartEmptyImage.isHidden = true
+        }
+        
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cartTableView.reloadData()
+    }
+    
+    
     @IBAction func didConfirmButtonTapped(_ sender: Any) {
         
     }

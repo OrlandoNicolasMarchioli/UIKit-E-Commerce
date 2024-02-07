@@ -52,14 +52,6 @@ class HomeViewController: UIViewController {
         horizontalTableView.reloadData()
     }
     
-    //    @IBAction func didCartTapButton(_ sender: Any) {
-    //        let storyboard = UIStoryboard(name: "CartViewController", bundle: nil)
-    //        let cartController = storyboard.instantiateViewController(withIdentifier: "CartViewController" ) as! CartViewController
-    ////        cartController.productsToBuy = products
-    //        self.present(cartController, animated: true, completion: nil)
-    //        print("Button pressed")
-    //    }
-    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
@@ -91,7 +83,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         
         let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailVC.product = selectedProduct
-        
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
