@@ -36,6 +36,7 @@ class CartViewController: UIViewController, DetailViewControllerDelegate {
         productsToBuy = CartManager.shared.cartItems
         if productsToBuy.isEmpty {
             cartEmptyImage.isHidden = false
+            
         } else {
             cartEmptyImage.isHidden = true
         }
