@@ -25,6 +25,7 @@
 		52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */; };
 		52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
+		657CB6DD2B75558700436743 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CB6DC2B75558700436743 /* CartManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellCollectionViewCellLayout.swift; path = "E-Commerce/Presentation/Views/Home/HomeCollectionView/MyCellCollectionViewCellLayout.swift"; sourceTree = SOURCE_ROOT; };
 		52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartViewController.storyboard; sourceTree = "<group>"; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		657CB6DC2B75558700436743 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CartManager.swift; path = "E-Commerce/Domain/Repository/CartManager.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +132,7 @@
 			children = (
 				529B43992B17A2A200DA408A /* Models */,
 				529B43982B17A29800DA408A /* UseCases */,
-				529B43972B17A28F00DA408A /* Repository */,
+				657CB6DE2B7558D900436743 /* Repository */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -141,13 +143,6 @@
 				529B439A2B17A2B200DA408A /* Api */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		529B43972B17A28F00DA408A /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		529B43982B17A29800DA408A /* UseCases */ = {
@@ -221,6 +216,14 @@
 				521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */,
 			);
 			path = HomeCollectionView;
+			sourceTree = "<group>";
+		};
+		657CB6DE2B7558D900436743 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				657CB6DC2B75558700436743 /* CartManager.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +305,7 @@
 				529E36CB2B69A0D70041EA19 /* DetailViewController.swift in Sources */,
 				5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */,
 				5267AA432B55CE4A0049F237 /* Product.swift in Sources */,
+				657CB6DD2B75558700436743 /* CartManager.swift in Sources */,
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
 				5202A5CE2B7278AE007A45C8 /* DetailViewControllerDelegate.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,

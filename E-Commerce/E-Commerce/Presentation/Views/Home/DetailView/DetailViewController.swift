@@ -59,8 +59,10 @@ class DetailViewController: UIViewController{
             return
         }
         
-        delegate?.didAddToChart(product: self.product, quantity: quantity)
+        //delegate?.didAddToChart(product: self.product, quantity: quantity)
         self.productQuantity.text = "0"
+        
+        CartManager.shared.addToCart(product: product, quantity: quantity)
     }
     
     private func configure(product: Product){

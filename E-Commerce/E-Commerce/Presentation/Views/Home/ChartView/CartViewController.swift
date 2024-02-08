@@ -21,7 +21,7 @@ class CartViewController: UIViewController, DetailViewControllerDelegate {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "HomeTableViewCell", bundle: nil)
-        cartTableView.register(nib, forCellReuseIdentifier: "cartCell")
+        cartTableView.register(nib, forCellReuseIdentifier: "cell")
         
         cartTableView.dataSource = self
         cartTableView.delegate = self
@@ -32,6 +32,8 @@ class CartViewController: UIViewController, DetailViewControllerDelegate {
         itemTotal.text = "0"
         
         cartEmptyImage.image = UIImage(named: "cart.fill.badge.plus")
+        
+        productsToBuy = CartManager.shared.cartItems
         if productsToBuy.isEmpty {
             cartEmptyImage.isHidden = false
         } else {
@@ -64,7 +66,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let product = productsToBuy[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as? HomeTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HomeTableViewCell
         else { return UITableViewCell() }
         
         cell.configure(product: product)
