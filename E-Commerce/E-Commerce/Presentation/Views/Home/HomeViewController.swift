@@ -16,9 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet var verticalTableView: UITableView!
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
-    
-    var products: [Product] = [Product(image: "vino", name: "Vino toro", type: "bebidas", price: 2500.0),Product(image: "aceituna", name: "Aceitunas sin carozo", type: "frutas", price: 1000.0),Product(image: "cervezaCorona", name: "Cerveza corona 300cc", type: "bebidas", price: 2500),Product(image: "quesoFresco", name: "Queso fresco ", type: "quesos", price: 5460.0),Product(image: "LecheEnteraLaSerenisima", name: "Leche entera 1L", type: "bebidas s/ alcohol", price: 1500),Product(image: "anana", name: "Anana", type: "frutas", price: 750)]
-    
+    private var homeViewModel: HomeViewModel!
+    private var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,10 @@ class HomeViewController: UIViewController {
         horizontalTableView.collectionViewLayout = collectionViewLayout
         verticalTableView.register(nib, forCellReuseIdentifier: "cell")
         horizontalTableView.register(collectionNib, forCellWithReuseIdentifier: "collectionCell")
+        let mockRepository = MockProductsRepository()
+        homeViewModel = HomeViewModel(productsRepository: mockRepository)
+        
+//        fetchProducts()
         
         horizontalTableView.dataSource = self
         horizontalTableView.delegate = self
@@ -51,6 +54,14 @@ class HomeViewController: UIViewController {
         verticalTableView.reloadData()
         horizontalTableView.reloadData()
     }
+    
+//    func fetchProducts(){
+//        products in homeViewModel.fetchProducts()
+//        // Handle the fetched products (e.g., update UI)
+//        self?.products = products
+//        self?.verticalTableView.reloadData()
+//        self?.horizontalTableView.reloadData()
+//    }
     
 }
 
