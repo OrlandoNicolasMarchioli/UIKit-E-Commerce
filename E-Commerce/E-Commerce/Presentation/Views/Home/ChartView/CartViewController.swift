@@ -31,11 +31,11 @@ class CartViewController: UIViewController, DetailViewControllerDelegate {
         
         itemTotal.text = "0"
         
-        cartEmptyImage.image = UIImage(named: "cart.fill.badge.plus")
-        
         productsToBuy = CartManager.shared.cartItems
+        cartEmptyImage.image = UIImage(systemName: "cart.fill.badge.plus")
         if productsToBuy.isEmpty {
             cartEmptyImage.isHidden = false
+            
         } else {
             cartEmptyImage.isHidden = true
         }
