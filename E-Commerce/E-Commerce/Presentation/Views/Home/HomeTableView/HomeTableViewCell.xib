@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,31 +45,36 @@
                         </constraints>
                     </imageView>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwQ-Wf-NoX">
-                        <rect key="frame" x="296" y="22" width="24" height="24"/>
+                        <rect key="frame" x="286" y="22" width="30" height="30"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="gMI-0X-C23"/>
-                            <constraint firstAttribute="width" constant="24" id="z4e-jX-vI1"/>
+                            <constraint firstAttribute="height" constant="30" id="Ze9-gn-h7y"/>
+                            <constraint firstAttribute="width" constant="30" id="eG0-Ll-FQw"/>
                         </constraints>
                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-Wm-d8c">
+                        <rect key="frame" x="232" y="24" width="37" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemPurpleColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="mzi-Wr-fIp" firstAttribute="leading" secondItem="bC0-4a-iLb" secondAttribute="trailing" constant="24" id="20K-OM-gbu"/>
                     <constraint firstItem="gwU-SM-7or" firstAttribute="top" secondItem="mzi-Wr-fIp" secondAttribute="bottom" constant="7" id="DR1-g3-OJN"/>
                     <constraint firstItem="bC0-4a-iLb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NDU-hz-bEi"/>
                     <constraint firstAttribute="bottom" secondItem="bC0-4a-iLb" secondAttribute="bottom" id="VQA-Xx-vbO"/>
-                    <constraint firstAttribute="trailing" secondItem="VwQ-Wf-NoX" secondAttribute="trailing" id="WLU-hq-QiO"/>
                     <constraint firstItem="gwU-SM-7or" firstAttribute="leading" secondItem="bC0-4a-iLb" secondAttribute="trailing" constant="24" id="Wqc-51-ljb"/>
-                    <constraint firstAttribute="trailing" secondItem="VwQ-Wf-NoX" secondAttribute="trailing" id="b4A-hU-gUu"/>
                     <constraint firstItem="VwQ-Wf-NoX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="bIu-Ad-XNC"/>
                     <constraint firstItem="bC0-4a-iLb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cuf-AH-gYe"/>
+                    <constraint firstAttribute="trailing" secondItem="VwQ-Wf-NoX" secondAttribute="trailing" constant="4" id="dGJ-P5-fbe"/>
                     <constraint firstItem="1XF-JJ-Wll" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="iMP-MM-T6s"/>
                     <constraint firstItem="mzi-Wr-fIp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="kg0-Ze-F7R"/>
                     <constraint firstAttribute="trailing" secondItem="1XF-JJ-Wll" secondAttribute="trailing" constant="10" id="l7P-RZ-wHd"/>
-                    <constraint firstAttribute="trailing" secondItem="VwQ-Wf-NoX" secondAttribute="trailing" id="n0L-Nk-N1P"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -78,6 +83,7 @@
                 <outlet property="itemImage" destination="bC0-4a-iLb" id="Wua-ih-bcV"/>
                 <outlet property="itemName" destination="mzi-Wr-fIp" id="dQc-FC-gBd"/>
                 <outlet property="itemPrice" destination="1XF-JJ-Wll" id="KKs-a6-HOa"/>
+                <outlet property="itemTotal" destination="lxi-Wm-d8c" id="MDh-Ch-7Tz"/>
                 <outlet property="itemType" destination="gwU-SM-7or" id="tbS-Bg-sKc"/>
             </connections>
             <point key="canvasLocation" x="135.87786259541986" y="-294.36619718309862"/>

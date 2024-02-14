@@ -10,20 +10,50 @@ import Foundation
 class CartManager: DetailViewControllerDelegate {
     
     static let shared = CartManager()
-    var cartItems = [Product]() // TODO: CREATE ANOTHER MODEL THAT CONTAINS THE Product OBJECT AND THE QUANTITY
+    var cartItems = [ProductToBuy]()
     
-    func getCartItems() -> [Product] {
+    func getCartItems() -> [ProductToBuy] {
         return cartItems
     }
     
-    func addToCart(product: Product, quantity: Int) {
+    func addToCart(product: ProductToBuy) {
         cartItems.append(product)
-        print(product.name)
+        print(product.product.name)
         print(cartItems.count)
     }
     
     // MARK: DetailViewControllerDelegate
-    func didAddToChart(product: Product, quantity: Int) {
-        addToCart(product: product, quantity: quantity)
+    func didAddToChart(productToBuy: ProductToBuy) {
+        if (!checkIfProductExistsOnCart(productToBuy: productToBuy)){
+             addToCart(product: productToBuy)
+        }else{
+            addQuantityToAnExistantProduct(productToBuy: productToBuy)
+        }
+    }
+    
+    func checkIfProductExistsOnCart(productToBuy : ProductToBuy) -> Bool{
+        for product in cartItems{
+            if(productToBuy.product.id == product.product.id){
+                return true
+            }
+        }
+        return false
+    }
+    
+    private func addQuantityToAnExistantProduct(productToBuy: ProductToBuy){
+        for index in cartItems.indices {
+                if cartItems[index].product.id == productToBuy.product.id {
+                    cartItems[index].quantity += productToBuy.quantity
+                    return
+                }
+            }
+    }
+    
+    func obtainCartTotal() -> Double{
+        var cartTotal = 0.0
+        for productToBuy in cartItems{
+            cartTotal += productToBuy.product.price * Double(productToBuy.quantity)
+        }
+        return cartTotal
     }
 }
