@@ -16,6 +16,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet var itemType: UILabel!
     @IBOutlet var itemPrice: UILabel!
     
+    @IBOutlet var itemTotal: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +24,9 @@ class HomeTableViewCell: UITableViewCell {
         itemEliminate.setImage(UIImage(systemName: "trash"), for: .normal)
         itemEliminate.setTitle("", for: .normal)
         itemEliminate.imageView?.contentMode = .scaleAspectFit
-        itemEliminate.layer.cornerRadius = 10
+        itemEliminate.layer.cornerRadius = itemEliminate.bounds.width / 2
+        
+        itemTotal.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,6 +42,8 @@ class HomeTableViewCell: UITableViewCell {
         layer.shadowOffset = CGSize(width: 0, height: 4)
         layer.shadowRadius = 5
         layer.masksToBounds = false
+        
+        
         
         
     }

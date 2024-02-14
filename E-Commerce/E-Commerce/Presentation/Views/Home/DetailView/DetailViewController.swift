@@ -58,11 +58,8 @@ class DetailViewController: UIViewController{
         guard let quantity = Int(productQuantity.text ?? "0"), quantity > 0 else {
             return
         }
-        
-        //delegate?.didAddToChart(product: self.product, quantity: quantity)
+        CartManager.shared.didAddToChart(productToBuy: ProductToBuy(product: product, quantity: quantity))
         self.productQuantity.text = "0"
-        
-        CartManager.shared.addToCart(product: product, quantity: quantity)
     }
     
     private func configure(product: Product){

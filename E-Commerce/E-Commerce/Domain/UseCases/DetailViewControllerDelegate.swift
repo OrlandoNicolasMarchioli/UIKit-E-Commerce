@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DetailViewControllerDelegate: AnyObject{
-    func didAddToChart(product: Product, quantity: Int)
+    func didAddToChart(productToBuy: ProductToBuy)
 }
