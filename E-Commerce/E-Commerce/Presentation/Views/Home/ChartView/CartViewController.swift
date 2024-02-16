@@ -65,7 +65,9 @@ class CartViewController: UIViewController {
         
         if let indexPath = cartTableView.indexPath(for: cell) {
             // Remove the selected product from the array
+            CartManager.shared.deleteItemFromCart(product: productsToBuy[indexPath.row])
             productsToBuy.remove(at: indexPath.row)
+            
             
             // Update the total label
             itemTotal.text = String(CartManager.shared.obtainCartTotal())
