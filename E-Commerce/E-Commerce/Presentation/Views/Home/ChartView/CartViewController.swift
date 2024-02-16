@@ -31,21 +31,11 @@ class CartViewController: UIViewController {
         
         itemTotal.text = "0"
         
-        cartEmptyImage.image = UIImage(named: "cart.fill.badge.plus")
+        checkIfHasToBeEnabled()
         
         productsToBuy = CartManager.shared.cartItems
         cartEmptyImage.image = UIImage(systemName: "cart.fill.badge.plus")
         
-        
-        if productsToBuy.isEmpty {
-            cartEmptyImage.isHidden = false
-            confirmButton.isEnabled = false
-            
-        } else {
-            cartEmptyImage.isHidden = true
-            confirmButton.isEnabled = true
-            itemTotal.text = String(CartManager.shared.obtainCartTotal())
-        }
         
     }
     
@@ -60,7 +50,6 @@ class CartViewController: UIViewController {
     }
     
     @objc func deleteProduct(_ sender: UIButton) {
-        print("deleted")
         guard let cell = sender.superview?.superview as? HomeTableViewCell else {
             return
         }
@@ -70,8 +59,22 @@ class CartViewController: UIViewController {
             productsToBuy.remove(at: indexPath.row)
             
             itemTotal.text = String(CartManager.shared.obtainCartTotal())
+            
+            checkIfHasToBeEnabled()
         
             cartTableView.reloadData()
+        }
+    }
+    
+    func checkIfHasToBeEnabled(){
+        if productsToBuy.isEmpty {
+            cartEmptyImage.isHidden = false
+            confirmButton.isEnabled = false
+            
+        } else {
+            cartEmptyImage.isHidden = true
+            confirmButton.isEnabled = true
+            itemTotal.text = String(CartManager.shared.obtainCartTotal())
         }
     }
     
@@ -93,6 +96,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         cell.itemTotal.text =  String(Int(productToBuy.quantity) * Int(productToBuy.product.price))
         cell.itemPrice.isHidden = true
         cell.itemEliminate.addTarget(self, action:#selector(deleteProduct(_:)), for: .touchUpInside)
+        checkIfHasToBeEnabled()
         return cell
     }
     
