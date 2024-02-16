@@ -51,7 +51,6 @@ class HomeViewController: UIViewController {
         verticalTableView.reloadData()
         horizontalTableView.reloadData()
     }
-    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
@@ -67,7 +66,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
         
         cell.configure(product: product)
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

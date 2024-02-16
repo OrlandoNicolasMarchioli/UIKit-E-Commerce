@@ -34,6 +34,7 @@ class CartViewController: UIViewController {
         productsToBuy = CartManager.shared.cartItems
         cartEmptyImage.image = UIImage(systemName: "cart.fill.badge.plus")
         
+        
         if productsToBuy.isEmpty {
             cartEmptyImage.isHidden = false
             confirmButton.isEnabled = false
@@ -56,6 +57,24 @@ class CartViewController: UIViewController {
         
     }
     
+    @objc func deleteProduct(_ sender: UIButton) {
+        print("deleted")
+        guard let cell = sender.superview?.superview as? HomeTableViewCell else {
+            return
+        }
+        
+        if let indexPath = cartTableView.indexPath(for: cell) {
+            // Remove the selected product from the array
+            productsToBuy.remove(at: indexPath.row)
+            
+            // Update the total label
+            itemTotal.text = String(CartManager.shared.obtainCartTotal())
+            
+            // Reload the table view
+            cartTableView.reloadData()
+        }
+    }
+    
 }
 
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
@@ -73,6 +92,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         cell.itemTotal.isHidden = false
         cell.itemTotal.text =  String(Int(productToBuy.quantity) * Int(productToBuy.product.price))
         cell.itemPrice.isHidden = true
+        cell.itemEliminate.addTarget(self, action:#selector(deleteProduct(_:)), for: .touchUpInside)
         return cell
     }
     
