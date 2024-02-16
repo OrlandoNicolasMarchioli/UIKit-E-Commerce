@@ -59,7 +59,15 @@ class DetailViewController: UIViewController{
             return
         }
         CartManager.shared.didAddToChart(productToBuy: ProductToBuy(product: product, quantity: quantity))
+        showAlert(message: "Product added to cart")
         self.productQuantity.text = "0"
+    }
+
+    private func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     private func configure(product: Product){
