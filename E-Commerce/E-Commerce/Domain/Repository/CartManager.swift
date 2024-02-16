@@ -17,13 +17,7 @@ class CartManager: DetailViewControllerDelegate {
     }
     
     func deleteItemFromCart(product: ProductToBuy){
-        var counter = 0
-        for p in getCartItems(){
-            if(p.product.name == product.product.name){
-                self.cartItems.remove(at: counter)
-            }
-            counter += 1
-        }
+        self.cartItems = cartItems.filter(){ $0 != product }
     }
     
     func addToCart(product: ProductToBuy) {

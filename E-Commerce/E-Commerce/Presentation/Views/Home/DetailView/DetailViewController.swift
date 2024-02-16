@@ -39,9 +39,7 @@ class DetailViewController: UIViewController{
         addToCartButton.layer.cornerRadius = 10
         addToCartButton.isEnabled = false
         
-        
         configure(product: product)
-        
     }
     @IBAction func addQuantity(_ sender: Any) {
         self.productQuantity.text = String(Int(self.productQuantity.text!)! + 1)
@@ -59,15 +57,17 @@ class DetailViewController: UIViewController{
             return
         }
         CartManager.shared.didAddToChart(productToBuy: ProductToBuy(product: product, quantity: quantity))
-        showAlert(message: "Product added to cart")
         self.productQuantity.text = "0"
+        checkAddToChartState()
+        showAlert(message: "Product added to cart")
     }
 
     private func showAlert(message: String) {
         let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                alertController.dismiss(animated: true, completion: nil)
+            }
     }
     
     private func configure(product: Product){
