@@ -22,8 +22,6 @@ class CartManager: DetailViewControllerDelegate {
     
     func addToCart(product: ProductToBuy) {
         cartItems.append(product)
-        print(product.product.name)
-        print(cartItems.count)
     }
     
     // MARK: DetailViewControllerDelegate
