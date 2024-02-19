@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController{
     
+    // MARK: IBOutlet connections
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
@@ -18,40 +19,44 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var lessButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
+    
+    // MARK: DetailViewController variables
     var delegate: DetailViewControllerDelegate?
     var product: Product = Product(image: "", name: "", type: "", price: 0)
-    
+
+    // MARK: DetailViewController ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         productQuantity.text = "0"
-        plusButton.setImage(UIImage(systemName: "plus"), for: .normal)
         plusButton.setTitle("", for: .normal)
         plusButton.imageView?.contentMode = .scaleAspectFit
         plusButton.layer.cornerRadius = plusButton.bounds.width / 2
+        configureButtonImage(button: plusButton, name: "plus")
         
-        lessButton.setImage(UIImage(systemName: "minus"), for: .normal)
         lessButton.setTitle("", for: .normal)
         lessButton.imageView?.contentMode = .scaleAspectFit
         lessButton.layer.cornerRadius = lessButton.bounds.width / 2
+        configureButtonImage(button: lessButton, name: "minus")
         
         addToCartButton.layer.cornerRadius = 10
         addToCartButton.isEnabled = false
         
         configure(product: product)
+    
     }
     @IBAction func addQuantity(_ sender: Any) {
         self.productQuantity.text = String(Int(self.productQuantity.text!)! + 1)
         checkAddToChartState()
     }
     
-    @IBAction func lessQuantity(_ sender: Any) {
+    @IBAction func reduceQuantity(_ sender: Any) {
         if(self.productQuantity.text! != "0"){
             self.productQuantity.text = String(Int(self.productQuantity.text!)! - 1)
         }
         checkAddToChartState()
     }
+
     @IBAction func addToCart(_ sender: Any) {
         guard let quantity = Int(productQuantity.text ?? "0"), quantity > 0 else {
             return
@@ -84,5 +89,9 @@ class DetailViewController: UIViewController{
         }else{
             self.addToCartButton.isEnabled = false
         }
+    }
+    
+    func configureButtonImage(button: UIButton, name: String){
+        button.setImage(UIImage(systemName: name), for: .normal)
     }
 }
