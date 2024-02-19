@@ -9,14 +9,14 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet var itemName: UILabel!
+    @IBOutlet weak var itemName: UILabel!
 
-    @IBOutlet var itemEliminate: UIButton!
-    @IBOutlet var itemImage: UIImageView!
-    @IBOutlet var itemType: UILabel!
-    @IBOutlet var itemPrice: UILabel!
+    @IBOutlet weak var itemEliminate: UIButton!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemType: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
     
-    @IBOutlet var itemTotal: UILabel!
+    @IBOutlet weak var itemTotal: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

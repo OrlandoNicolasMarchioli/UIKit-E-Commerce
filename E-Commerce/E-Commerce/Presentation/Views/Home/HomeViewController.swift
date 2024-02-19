@@ -9,10 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet var starButton: UIButton!
-    @IBOutlet var cartButton: UIButton!
-    @IBOutlet var horizontalTableView: UICollectionView!
-    @IBOutlet var verticalTableView: UITableView!
+    
+    @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var cartButton: UIButton!
+    @IBOutlet weak var horizontalTableView: UICollectionView!
+    @IBOutlet weak var verticalTableView: UITableView!
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
     
