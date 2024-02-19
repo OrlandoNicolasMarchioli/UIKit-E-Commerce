@@ -10,14 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController{
     
-    @IBOutlet var productImage: UIImageView!
-    @IBOutlet var productName: UILabel!
-    @IBOutlet var productPrice: UILabel!
-    @IBOutlet var productQuantity: UILabel!
-    @IBOutlet var productDescription: UILabel!
-    @IBOutlet var addToCartButton: UIButton!
-    @IBOutlet var lessButton: UIButton!
-    @IBOutlet var plusButton: UIButton!
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var productQuantity: UILabel!
+    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var addToCartButton: UIButton!
+    @IBOutlet weak var lessButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     var delegate: DetailViewControllerDelegate?
     var product: Product = Product(image: "", name: "", type: "", price: 0)
     

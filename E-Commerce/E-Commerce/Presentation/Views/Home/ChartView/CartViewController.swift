@@ -10,12 +10,12 @@ import UIKit
 class CartViewController: UIViewController {
     
     
-    @IBOutlet var cartEmptyImage: UIImageView!
-    @IBOutlet var cartTableView: UITableView!
+    @IBOutlet weak var cartEmptyImage: UIImageView!
+    @IBOutlet weak var cartTableView: UITableView!
     var cartViewController: CartViewController?
-    @IBOutlet var itemTotal: UILabel!
+    @IBOutlet weak var itemTotal: UILabel!
     var productsToBuy: [ProductToBuy] = []
-    @IBOutlet var confirmButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
     let verticalCellSpacing: CGFloat = 70.0
     
     override func viewDidLoad() {
