@@ -16,9 +16,9 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productQuantity: UILabel!
     @IBOutlet weak var productDescription: UILabel!
-    @IBOutlet weak var addToCartButton: ButtonCustomizer!
-    @IBOutlet weak var lessButton: ButtonCustomizer!
-    @IBOutlet weak var plusButton: ButtonCustomizer!
+    @IBOutlet weak var addToCartButton: CustomButton!
+    @IBOutlet weak var lessButton: CustomButton!
+    @IBOutlet weak var plusButton: CustomButton!
     
     // MARK: DetailViewController variables
     var delegate: DetailViewControllerDelegate?
@@ -29,12 +29,8 @@ class DetailViewController: UIViewController{
         super.viewDidLoad()
         
         productQuantity.text = "0"
-        plusButton.setTitle("", for: .normal)
-        plusButton.imageView?.contentMode = .scaleAspectFit
+
         plusButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "plus")
-        
-        lessButton.setTitle("", for: .normal)
-        lessButton.imageView?.contentMode = .scaleAspectFit
         lessButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "minus")
         
         addToCartButton.customButton(radius: 10)
@@ -44,11 +40,17 @@ class DetailViewController: UIViewController{
     
     }
     @IBAction func addQuantity(_ sender: Any) {
+        guard let quantity = self.productQuantity.text else{
+            return
+        }
         self.productQuantity.text = String(Int(self.productQuantity.text!)! + 1)
         checkAddToChartState()
     }
     
     @IBAction func reduceQuantity(_ sender: Any) {
+        guard let quantity = self.productQuantity.text else{
+            return
+        }
         if(self.productQuantity.text! != "0"){
             self.productQuantity.text = String(Int(self.productQuantity.text!)! - 1)
         }
@@ -68,7 +70,7 @@ class DetailViewController: UIViewController{
     private func showAlert(message: String) {
         let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
         present(alertController, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
                 alertController.dismiss(animated: true, completion: nil)
             }
     }
@@ -78,10 +80,12 @@ class DetailViewController: UIViewController{
         self.productName.text = product.name
         self.productPrice.text = "$ " + String(product.price)
         self.productDescription.text = product.type
-        
     }
     
     private func checkAddToChartState(){
+        guard let quantity = self.productQuantity.text else{
+            return
+        }
         if(Int(self.productQuantity.text!)! > 0){
             self.addToCartButton.isEnabled = true
         }else{

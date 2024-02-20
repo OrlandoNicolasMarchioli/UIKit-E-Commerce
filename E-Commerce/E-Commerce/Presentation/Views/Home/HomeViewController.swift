@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: HomeViewController IBOutlets
-    @IBOutlet weak var starButton: ButtonCustomizer!
-    @IBOutlet weak var cartButton: ButtonCustomizer!
+    @IBOutlet weak var starButton: CustomButton!
+    @IBOutlet weak var cartButton: CustomButton!
     @IBOutlet weak var horizontalTableView: UICollectionView!
     @IBOutlet weak var verticalTableView: UITableView!
     

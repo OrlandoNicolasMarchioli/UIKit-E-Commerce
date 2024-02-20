@@ -60,7 +60,7 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-T0-C3K" customClass="ButtonCustomizer" customModule="E_Commerce" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOE-T0-C3K" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
                                 <rect key="frame" x="29" y="722" width="336" height="56"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
