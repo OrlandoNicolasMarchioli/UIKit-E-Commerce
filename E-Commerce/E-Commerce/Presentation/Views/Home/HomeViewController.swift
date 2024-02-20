@@ -16,11 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var verticalTableView: UITableView!
     
     // MARK: HomeViewController variables
+
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
-    
-    var products: [Product] = [Product(image: "vino", name: "Vino toro", type: "bebidas", price: 2500.0),Product(image: "aceituna", name: "Aceitunas sin carozo", type: "frutas", price: 1000.0),Product(image: "cervezaCorona", name: "Cerveza corona 300cc", type: "bebidas", price: 2500),Product(image: "quesoFresco", name: "Queso fresco ", type: "quesos", price: 5460.0),Product(image: "LecheEnteraLaSerenisima", name: "Leche entera 1L", type: "bebidas s/ alcohol", price: 1500),Product(image: "anana", name: "Anana", type: "frutas", price: 750)]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +47,12 @@ class HomeViewController: UIViewController {
 // MARK: Home table view configuration
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ horizontalTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return ProductsRepository.shared.getProducts().count
     }
     
     //What kind of cell you want to return
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let product = products[indexPath.row]
+        let product = ProductsRepository.shared.getProducts()[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? HomeTableViewCell
         else { return UITableViewCell() }
         
@@ -71,7 +69,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedProduct = products[indexPath.row]
+        let selectedProduct = ProductsRepository.shared.getProducts()[indexPath.row]
         
         let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailVC.product = selectedProduct
@@ -84,11 +82,11 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
 // MARK: Home collection view configuration
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
+        return ProductsRepository.shared.getProducts().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let product = products[indexPath.row]
+        let product = ProductsRepository.shared.getProducts()[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MyCellCollectionViewCell
         else {return UICollectionViewCell()}
         
@@ -101,7 +99,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedProduct = products[indexPath.row]
+        let selectedProduct = ProductsRepository.shared.getProducts()[indexPath.row]
         
         let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailVC.product = selectedProduct
