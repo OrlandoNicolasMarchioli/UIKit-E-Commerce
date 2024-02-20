@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var verticalTableView: UITableView!
     
     // MARK: HomeViewController variables
+
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
     
