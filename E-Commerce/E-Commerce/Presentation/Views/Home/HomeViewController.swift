@@ -9,11 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    
-    @IBOutlet weak var starButton: UIButton!
-    @IBOutlet weak var cartButton: UIButton!
+    // MARK: HomeViewController IBOutlets
+    @IBOutlet weak var starButton: ButtonCustomizer!
+    @IBOutlet weak var cartButton: ButtonCustomizer!
     @IBOutlet weak var horizontalTableView: UICollectionView!
     @IBOutlet weak var verticalTableView: UITableView!
+    
+    // MARK: HomeViewController variables
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
     
@@ -30,17 +32,8 @@ class HomeViewController: UIViewController {
         verticalTableView.dataSource = self
         verticalTableView.delegate = self
         
-        
-        cartButton.setImage(UIImage(systemName: "cart"), for: .normal)
-        cartButton.setTitle("", for: .normal)
-        cartButton.imageView?.contentMode = .scaleAspectFit
-        cartButton.layer.cornerRadius = 10
-        
-        starButton.setImage(UIImage(systemName: "star"), for: .normal)
-        starButton.setTitle("", for: .normal)
-        starButton.imageView?.contentMode = .scaleAspectFit
-        starButton.imageView?.tintColor = UIColor.white
-        starButton.layer.cornerRadius = 10
+        cartButton.customButtonWithSystemImage(radius: 10, imageName: "cart")
+        starButton.customButtonWithSystemImage(radius: 10, imageName: "star")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +43,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: Home table view configuration
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ horizontalTableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ProductsRepository.shared.getProducts().count
@@ -83,6 +77,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
 }
 
+
+// MARK: Home collection view configuration
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ProductsRepository.shared.getProducts().count

@@ -13,7 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartEmptyImage: UIImageView!
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var itemTotal: UILabel!
-    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var confirmButton: ButtonCustomizer!
     
     // MARK: CartViewController variables
     var productsToBuy: [ProductToBuy] = []
@@ -30,7 +30,7 @@ class CartViewController: UIViewController {
         cartTableView.dataSource = self
         cartTableView.delegate = self
         
-        confirmButton.layer.cornerRadius = 10
+        confirmButton.customButton(radius: 10) 
         
         itemTotal.text = "0"
         

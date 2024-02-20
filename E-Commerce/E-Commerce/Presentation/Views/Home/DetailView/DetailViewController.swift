@@ -16,9 +16,9 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productQuantity: UILabel!
     @IBOutlet weak var productDescription: UILabel!
-    @IBOutlet weak var addToCartButton: UIButton!
-    @IBOutlet weak var lessButton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var addToCartButton: ButtonCustomizer!
+    @IBOutlet weak var lessButton: ButtonCustomizer!
+    @IBOutlet weak var plusButton: ButtonCustomizer!
     
     // MARK: DetailViewController variables
     var delegate: DetailViewControllerDelegate?
@@ -31,15 +31,13 @@ class DetailViewController: UIViewController{
         productQuantity.text = "0"
         plusButton.setTitle("", for: .normal)
         plusButton.imageView?.contentMode = .scaleAspectFit
-        plusButton.layer.cornerRadius = plusButton.bounds.width / 2
-        configureButtonImage(button: plusButton, name: "plus")
+        plusButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "plus")
         
         lessButton.setTitle("", for: .normal)
         lessButton.imageView?.contentMode = .scaleAspectFit
-        lessButton.layer.cornerRadius = lessButton.bounds.width / 2
-        configureButtonImage(button: lessButton, name: "minus")
+        lessButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "minus")
         
-        addToCartButton.layer.cornerRadius = 10
+        addToCartButton.customButton(radius: 10)
         addToCartButton.isEnabled = false
         
         configure(product: product)
@@ -91,7 +89,4 @@ class DetailViewController: UIViewController{
         }
     }
     
-    func configureButtonImage(button: UIButton, name: String){
-        button.setImage(UIImage(systemName: name), for: .normal)
-    }
 }
