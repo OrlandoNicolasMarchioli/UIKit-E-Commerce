@@ -13,7 +13,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartEmptyImage: UIImageView!
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var itemTotal: UILabel!
-    @IBOutlet weak var confirmButton: ButtonCustomizer!
+    @IBOutlet weak var confirmButton: CustomButton!
     
     // MARK: CartViewController variables
     var productsToBuy: [ProductToBuy] = []

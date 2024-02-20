@@ -15,15 +15,13 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var itemTotal: UILabel!
     @IBOutlet var itemTypeLabel: UILabel!
-    @IBOutlet var deleteItemButton: ButtonCustomizer!
+    @IBOutlet var deleteItemButton: CustomButton!
     
     // MARK: HomeTableViewCell ViewLifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
 
         deleteItemButton.customButtonWithSystemImage(radius: deleteItemButton.bounds.width / 2, imageName: "trash")
-        deleteItemButton.setTitle("", for: .normal)
-        deleteItemButton.imageView?.contentMode = .scaleAspectFit
         
         itemTotal.isHidden = true
     }

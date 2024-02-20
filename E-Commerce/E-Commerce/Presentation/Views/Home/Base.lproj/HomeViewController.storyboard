@@ -32,7 +32,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-C5-dCQ" customClass="ButtonCustomizer" customModule="E_Commerce" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOi-C5-dCQ" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
                                 <rect key="frame" x="332" y="105" width="45" height="43"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>
@@ -46,7 +46,7 @@
                                     <segue destination="xMk-Ro-fEw" kind="show" id="Ljd-hU-ZXt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsj-Qw-H7t" customClass="ButtonCustomizer" customModule="E_Commerce" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsj-Qw-H7t" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
                                 <rect key="frame" x="16" y="105" width="43" height="45"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <constraints>

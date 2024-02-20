@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ButtonCustomizer: UIButton{
+class CustomButton: UIButton{
     
     func customButtonWithSystemImage( radius: CGFloat, imageName: String) -> Void{
         configureSystemNameButtonImage(systemName: imageName)
