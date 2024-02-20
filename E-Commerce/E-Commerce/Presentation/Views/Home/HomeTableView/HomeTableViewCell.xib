@@ -44,7 +44,7 @@
                             <constraint firstAttribute="width" constant="65" id="wqp-Rg-sNP"/>
                         </constraints>
                     </imageView>
-                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwQ-Wf-NoX">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwQ-Wf-NoX" customClass="ButtonCustomizer" customModule="E_Commerce" customModuleProvider="target">
                         <rect key="frame" x="286" y="22" width="30" height="30"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>

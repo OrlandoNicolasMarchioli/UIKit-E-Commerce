@@ -15,17 +15,15 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var itemTotal: UILabel!
     @IBOutlet var itemTypeLabel: UILabel!
-    @IBOutlet var deleteItemButton: UIButton!
+    @IBOutlet var deleteItemButton: ButtonCustomizer!
     
     // MARK: HomeTableViewCell ViewLifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        deleteItemButton.setImage(UIImage(systemName: "trash"), for: .normal)
+        deleteItemButton.customButtonWithSystemImage(radius: deleteItemButton.bounds.width / 2, imageName: "trash")
         deleteItemButton.setTitle("", for: .normal)
         deleteItemButton.imageView?.contentMode = .scaleAspectFit
-        deleteItemButton.layer.cornerRadius = deleteItemButton.bounds.width / 2
-        configureButtonImage(button: deleteItemButton,name: "trash")
         
         itemTotal.isHidden = true
     }
@@ -53,12 +51,7 @@ class HomeTableViewCell: UITableViewCell {
         self.itemImage.image = imageForName(name: product.image)
     }
     
-    func configureButtonImage(button: UIButton, name: String){
-        button.setImage(UIImage(systemName: name), for: .normal)
-    }
-    
-    
-    func imageForName(name: String) -> UIImage?{
+    private func imageForName(name: String) -> UIImage?{
         return UIImage(named: name)
     }
     
