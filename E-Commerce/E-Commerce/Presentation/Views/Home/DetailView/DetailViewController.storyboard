@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="Y6W-OH-hqX" customClass="DetailViewController" customModule="E_Commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHU-Db-3YB">
+                                <rect key="frame" x="60.666666666666657" y="119" width="272" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="02T-RY-ZT9"/>
+                                    <constraint firstAttribute="width" constant="272" id="z7l-Xa-d7k"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-Wq-7PN">
+                                <rect key="frame" x="60" y="485" width="55" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-n0-529">
+                                <rect key="frame" x="290" y="485" width="47" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK9-76-uGb">
+                                <rect key="frame" x="185" y="636.66666666666663" width="23" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udg-wm-q2k" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
+                                <rect key="frame" x="28.666666666666657" y="721" width="336" height="56"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="OfI-Sc-zku"/>
+                                    <constraint firstAttribute="width" constant="336" id="nYm-25-NnV"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Agregar al Carrito"/>
+                                <connections>
+                                    <action selector="addToCart:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pAL-CK-Vb9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ql-Ue-ubV" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
+                                <rect key="frame" x="283" y="628.33333333333337" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ZQB-gV-fLC"/>
+                                    <constraint firstAttribute="height" constant="60" id="g76-6q-v3i"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="addQuantity:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hnO-XO-Tzl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skK-KN-O0k" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
+                                <rect key="frame" x="56" y="628" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Rwo-aF-z71"/>
+                                    <constraint firstAttribute="height" constant="60" id="xro-46-FRj"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="reduceQuantity:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bqb-KU-NWe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-Oq-CM7">
+                                <rect key="frame" x="152.66666666666666" y="443" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Ql-Ue-ubV" firstAttribute="top" secondItem="KoN-n0-529" secondAttribute="bottom" constant="118" id="00o-YD-PjZ"/>
+                            <constraint firstItem="fzo-Wq-7PN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="2YT-Rd-cjj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KoN-n0-529" secondAttribute="trailing" constant="56" id="3rg-MG-3gL"/>
+                            <constraint firstItem="fzo-Wq-7PN" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="6K3-jV-MSj"/>
+                            <constraint firstItem="Udg-wm-q2k" firstAttribute="top" secondItem="2Ql-Ue-ubV" secondAttribute="bottom" constant="32.670000000000002" id="9Ic-6z-Cqs"/>
+                            <constraint firstItem="KoN-n0-529" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="GA5-My-Eat"/>
+                            <constraint firstItem="vK9-76-uGb" firstAttribute="centerY" secondItem="skK-KN-O0k" secondAttribute="centerY" id="P5y-L5-6vx"/>
+                            <constraint firstItem="aHU-Db-3YB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wq2-wH-Cq3"/>
+                            <constraint firstItem="skK-KN-O0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="56" id="Y3N-cD-Dq8"/>
+                            <constraint firstItem="aqJ-Oq-CM7" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="34" id="YWM-a6-sw1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Ql-Ue-ubV" secondAttribute="trailing" constant="50" id="dlz-l4-9Pb"/>
+                            <constraint firstItem="Udg-wm-q2k" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ev3-9Y-3s3"/>
+                            <constraint firstItem="aqJ-Oq-CM7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gRF-fw-yKY"/>
+                            <constraint firstItem="skK-KN-O0k" firstAttribute="top" secondItem="fzo-Wq-7PN" secondAttribute="bottom" constant="117" id="qUa-x6-LwM"/>
+                            <constraint firstItem="vK9-76-uGb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qxN-4e-DxM"/>
+                            <constraint firstItem="aHU-Db-3YB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="u5R-dv-KrN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="Udg-wm-q2k" id="VYo-ht-uLp"/>
+                        <outlet property="lessButton" destination="skK-KN-O0k" id="I1O-9B-nfC"/>
+                        <outlet property="plusButton" destination="2Ql-Ue-ubV" id="96K-Yk-8BM"/>
+                        <outlet property="productDescription" destination="aqJ-Oq-CM7" id="eWA-7r-rvF"/>
+                        <outlet property="productImage" destination="aHU-Db-3YB" id="17e-JP-uwt"/>
+                        <outlet property="productName" destination="fzo-Wq-7PN" id="r3S-Ke-k85"/>
+                        <outlet property="productPrice" destination="KoN-n0-529" id="g27-fb-D6o"/>
+                        <outlet property="productQuantity" destination="vK9-76-uGb" id="YPl-BX-Sgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8.3969465648854964" y="-49.295774647887328"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
