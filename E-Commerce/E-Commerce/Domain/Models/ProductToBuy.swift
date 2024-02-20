@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductToBuy: Hashable, Identifiable{
+struct ProductToBuy: Hashable, Identifiable {
     let id = UUID()
     let product : Product
     var quantity : Int

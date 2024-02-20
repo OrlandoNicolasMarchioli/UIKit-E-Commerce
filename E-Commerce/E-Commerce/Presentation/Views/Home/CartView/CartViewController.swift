@@ -9,15 +9,18 @@ import UIKit
 
 class CartViewController: UIViewController {
     
-    
+    // MARK: IBOutlet connections
     @IBOutlet weak var cartEmptyImage: UIImageView!
     @IBOutlet weak var cartTableView: UITableView!
-    var cartViewController: CartViewController?
     @IBOutlet weak var itemTotal: UILabel!
+    @IBOutlet weak var confirmButton: CustomButton!
+    
+    // MARK: CartViewController variables
     var productsToBuy: [ProductToBuy] = []
-    @IBOutlet weak var confirmButton: UIButton!
+    var cartViewController: CartViewController?
     let verticalCellSpacing: CGFloat = 70.0
     
+    // MARK: CartViewController ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,16 +30,15 @@ class CartViewController: UIViewController {
         cartTableView.dataSource = self
         cartTableView.delegate = self
         
-        confirmButton.layer.cornerRadius = 10
+        confirmButton.customButton(radius: 10) 
         
         itemTotal.text = "0"
         
         checkIfHasToBeEnabled()
         
-        productsToBuy = CartManager.shared.cartItems
-        cartEmptyImage.image = UIImage(systemName: "cart.fill.badge.plus")
+        setProductsToBuy()
         
-        
+        configureCartEmptyImage(cartImage: cartEmptyImage)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -78,6 +80,14 @@ class CartViewController: UIViewController {
         }
     }
     
+    func configureCartEmptyImage(cartImage: UIImageView ){
+        cartImage.image = UIImage(systemName: "cart.fill.badge.plus")
+    }
+    
+    func setProductsToBuy() -> Void{
+        self.productsToBuy = CartManager.shared.cartItems
+    }
+    
 }
 
 extension CartViewController: UITableViewDataSource, UITableViewDelegate{
@@ -91,11 +101,11 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         else { return UITableViewCell() }
         
         cell.configure(product: productToBuy.product)
-        cell.itemEliminate.isHidden = false
+        cell.deleteItemButton.isHidden = false
         cell.itemTotal.isHidden = false
         cell.itemTotal.text =  String(Int(productToBuy.quantity) * Int(productToBuy.product.price))
         cell.itemPrice.isHidden = true
-        cell.itemEliminate.addTarget(self, action:#selector(deleteProduct(_:)), for: .touchUpInside)
+        cell.deleteItemButton.addTarget(self, action:#selector(deleteProduct(_:)), for: .touchUpInside)
         checkIfHasToBeEnabled()
         return cell
     }

@@ -9,22 +9,19 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
+    // MARK: HomeTableViewCell IBOutlet connections
     @IBOutlet weak var itemName: UILabel!
-
-    @IBOutlet weak var itemEliminate: UIButton!
     @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var itemType: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
-    
     @IBOutlet weak var itemTotal: UILabel!
+    @IBOutlet var itemTypeLabel: UILabel!
+    @IBOutlet var deleteItemButton: CustomButton!
+    
+    // MARK: HomeTableViewCell ViewLifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-        itemEliminate.setImage(UIImage(systemName: "trash"), for: .normal)
-        itemEliminate.setTitle("", for: .normal)
-        itemEliminate.imageView?.contentMode = .scaleAspectFit
-        itemEliminate.layer.cornerRadius = itemEliminate.bounds.width / 2
+
+        deleteItemButton.customButtonWithSystemImage(radius: deleteItemButton.bounds.width / 2, imageName: "trash")
         
         itemTotal.isHidden = true
     }
@@ -43,19 +40,16 @@ class HomeTableViewCell: UITableViewCell {
         layer.shadowRadius = 5
         layer.masksToBounds = false
         
-        
-        
-        
     }
     
     func configure(product: Product){
         self.itemName.text = "$ " + product.name
-        self.itemType.text = product.type
+        self.itemTypeLabel.text = product.type
         self.itemPrice.text = String(product.price)
         self.itemImage.image = imageForName(name: product.image)
     }
     
-    func imageForName(name: String) -> UIImage?{
+    private func imageForName(name: String) -> UIImage?{
         return UIImage(named: name)
     }
     

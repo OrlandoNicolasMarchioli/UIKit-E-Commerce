@@ -22,8 +22,6 @@ class CartManager: DetailViewControllerDelegate {
     
     func addToCart(product: ProductToBuy) {
         cartItems.append(product)
-        print(product.product.name)
-        print(cartItems.count)
     }
     
     // MARK: DetailViewControllerDelegate
@@ -36,20 +34,12 @@ class CartManager: DetailViewControllerDelegate {
     }
     
     func checkIfProductExistsOnCart(productToBuy : ProductToBuy) -> Bool{
-        for product in cartItems{
-            if(productToBuy.product.id == product.product.id){
-                return true
-            }
-        }
-        return false
+        return !cartItems.filter { $0.product.id == productToBuy.product.id }.isEmpty
     }
     
     private func addQuantityToAnExistantProduct(productToBuy: ProductToBuy){
-        for index in cartItems.indices {
-                if cartItems[index].product.id == productToBuy.product.id {
-                    cartItems[index].quantity += productToBuy.quantity
-                    return
-                }
+        if let index = cartItems.firstIndex(where: { $0.product.id == productToBuy.product.id }) {
+                cartItems[index].quantity += productToBuy.quantity
             }
     }
     
