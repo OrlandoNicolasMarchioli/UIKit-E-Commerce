@@ -20,6 +20,7 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var lessButton: CustomButton!
     @IBOutlet weak var plusButton: CustomButton!
     
+    @IBOutlet var starButton: CustomButton!
     // MARK: DetailViewController variables
     var delegate: DetailViewControllerDelegate?
     var product: Product = Product(image: "", name: "", type: "", price: 0)
@@ -32,6 +33,7 @@ class DetailViewController: UIViewController{
 
         plusButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "plus")
         lessButton.customButtonWithSystemImage(radius: plusButton.bounds.width / 2, imageName: "minus")
+        setStarStatus()
         
         addToCartButton.customButton(radius: 10)
         addToCartButton.isEnabled = false
@@ -43,7 +45,7 @@ class DetailViewController: UIViewController{
         guard let quantity = self.productQuantity.text else{
             return
         }
-        self.productQuantity.text = String(Int(self.productQuantity.text!)! + 1)
+        self.productQuantity.text = String(Int(quantity)! + 1)
         checkAddToChartState()
     }
     
@@ -52,7 +54,7 @@ class DetailViewController: UIViewController{
             return
         }
         if(self.productQuantity.text! != "0"){
-            self.productQuantity.text = String(Int(self.productQuantity.text!)! - 1)
+            self.productQuantity.text = String(Int(quantity)! - 1)
         }
         checkAddToChartState()
     }
@@ -66,7 +68,17 @@ class DetailViewController: UIViewController{
         checkAddToChartState()
         showAlert(message: "Product added to cart")
     }
-
+    
+    
+    @IBAction func addToFavoriteButton(_ sender: Any) {
+        changeStarButtonBackground()
+        if(starButtonIsFilled()){
+            FavoriteManager.shared.saveFavorite(product: self.product)
+        }else {
+            FavoriteManager.shared.deleteFavorite(product: self.product)
+        }
+    }
+    
     private func showAlert(message: String) {
         let alertController = UIAlertController(title: "Success", message: message, preferredStyle: .alert)
         present(alertController, animated: true, completion: nil)
@@ -86,11 +98,38 @@ class DetailViewController: UIViewController{
         guard let quantity = self.productQuantity.text else{
             return
         }
-        if(Int(self.productQuantity.text!)! > 0){
+        if(Int(quantity)! > 0){
             self.addToCartButton.isEnabled = true
         }else{
             self.addToCartButton.isEnabled = false
         }
+    }
+    
+    private func changeStarButtonBackground() -> Void{
+        guard let image = self.starButton else{
+            return
+        }
+        if (starButtonIsFilled()){
+            image.setImage(UIImage(systemName: "star"), for: .normal)
+        }else{
+            image.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        }
+    }
+    
+    private func setStarStatus(){
+        if (!checkIfProductIsFavorite(product: product)){
+            self.starButton.customButtonWithSystemImage(radius: 10, imageName: "star.fill")
+        }else{
+            self.starButton.customButtonWithSystemImage(radius: 10, imageName: "star")
+        }
+    }
+    
+    private func starButtonIsFilled() -> Bool{
+        return self.starButton.image(for: .normal) == UIImage(systemName: "star.fill")
+    }
+    
+    private func checkIfProductIsFavorite(product: Product) -> Bool{
+        return FavoriteManager.shared.getFavorites().filter(){ $0.id == product.id }.isEmpty
     }
     
 }

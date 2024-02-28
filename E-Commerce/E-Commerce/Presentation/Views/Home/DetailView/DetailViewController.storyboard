@@ -89,6 +89,19 @@
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzq-qv-rHi" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
+                                <rect key="frame" x="334" y="61" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="wME-cg-YrS"/>
+                                    <constraint firstAttribute="width" constant="43" id="yjT-4i-oUR"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="addToFavoriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BoO-bF-B8o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -99,6 +112,7 @@
                             <constraint firstItem="fzo-Wq-7PN" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="6K3-jV-MSj"/>
                             <constraint firstItem="Udg-wm-q2k" firstAttribute="top" secondItem="2Ql-Ue-ubV" secondAttribute="bottom" constant="32.670000000000002" id="9Ic-6z-Cqs"/>
                             <constraint firstItem="KoN-n0-529" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="GA5-My-Eat"/>
+                            <constraint firstItem="Dzq-qv-rHi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="2" id="N17-Cp-B4f"/>
                             <constraint firstItem="vK9-76-uGb" firstAttribute="centerY" secondItem="skK-KN-O0k" secondAttribute="centerY" id="P5y-L5-6vx"/>
                             <constraint firstItem="aHU-Db-3YB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wq2-wH-Cq3"/>
                             <constraint firstItem="skK-KN-O0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="56" id="Y3N-cD-Dq8"/>
@@ -108,6 +122,7 @@
                             <constraint firstItem="aqJ-Oq-CM7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gRF-fw-yKY"/>
                             <constraint firstItem="skK-KN-O0k" firstAttribute="top" secondItem="fzo-Wq-7PN" secondAttribute="bottom" constant="117" id="qUa-x6-LwM"/>
                             <constraint firstItem="vK9-76-uGb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qxN-4e-DxM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dzq-qv-rHi" secondAttribute="trailing" constant="16" id="s2d-9k-nda"/>
                             <constraint firstItem="aHU-Db-3YB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="u5R-dv-KrN"/>
                         </constraints>
                     </view>
@@ -120,6 +135,7 @@
                         <outlet property="productName" destination="fzo-Wq-7PN" id="r3S-Ke-k85"/>
                         <outlet property="productPrice" destination="KoN-n0-529" id="g27-fb-D6o"/>
                         <outlet property="productQuantity" destination="vK9-76-uGb" id="YPl-BX-Sgm"/>
+                        <outlet property="starButton" destination="Dzq-qv-rHi" id="0AJ-5H-vve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
