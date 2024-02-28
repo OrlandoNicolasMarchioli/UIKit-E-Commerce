@@ -50,4 +50,8 @@ class CartManager: DetailViewControllerDelegate {
         }
         return cartTotal
     }
+    
+    func deleteAllProductsFromCart() -> Void{
+        self.cartItems.removeAll()
+    }
 }
