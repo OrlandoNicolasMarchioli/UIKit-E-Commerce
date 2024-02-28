@@ -30,7 +30,7 @@ class CartViewController: UIViewController {
         cartTableView.dataSource = self
         cartTableView.delegate = self
         
-        confirmButton.customButton(radius: 10) 
+        confirmButton.customButton(radius: 10)
         
         itemTotal.text = "0"
         
@@ -48,7 +48,7 @@ class CartViewController: UIViewController {
     
     
     @IBAction func didConfirmButtonTapped(_ sender: Any) {
-        
+        showConfirmCartAlert()
     }
     
     @objc func deleteProduct(_ sender: UIButton) {
@@ -67,6 +67,29 @@ class CartViewController: UIViewController {
             cartTableView.reloadData()
         }
     }
+    
+    private func showConfirmCartAlert() {
+        let alertController = UIAlertController(title: "Estas por confirmar tu pedido por: ", message: " $ \(CartManager.shared.obtainCartTotal())", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let acceptAction = UIAlertAction(title: "Accept", style: .default) { [weak self] _ in
+            self?.handleAcceptAction()
+        }
+        alertController.addAction(acceptAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func handleAcceptAction() {
+        CartManager.shared.deleteAllProductsFromCart()
+        self.productsToBuy.removeAll()
+        self.itemTotal.text = "0"
+        self.cartTableView.reloadData()
+        checkIfHasToBeEnabled()
+    }
+    
     
     func checkIfHasToBeEnabled(){
         if productsToBuy.isEmpty {
