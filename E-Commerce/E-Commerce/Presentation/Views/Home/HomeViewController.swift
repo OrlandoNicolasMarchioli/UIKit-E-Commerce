@@ -67,6 +67,7 @@ class HomeViewController: UIViewController {
         }else{
             self.favoritesEmptyImage.isHidden = false
             self.dontHaveFavoritesLabel.isHidden = false
+            self.horizontalTableView.isHidden = true
             configureEmptyFavoritesImage()
         }
     }
