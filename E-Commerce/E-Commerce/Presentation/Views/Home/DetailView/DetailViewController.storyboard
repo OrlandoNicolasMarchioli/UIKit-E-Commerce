@@ -24,13 +24,16 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-Wq-7PN">
-                                <rect key="frame" x="60" y="485" width="55" height="26"/>
+                                <rect key="frame" x="60" y="485" width="219" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="R9B-ct-Mb8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoN-n0-529">
-                                <rect key="frame" x="290" y="485" width="47" height="25.333333333333314"/>
+                                <rect key="frame" x="297" y="485" width="46.333333333333314" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" systemColor="systemPurpleColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,12 +111,12 @@
                         <constraints>
                             <constraint firstItem="2Ql-Ue-ubV" firstAttribute="top" secondItem="KoN-n0-529" secondAttribute="bottom" constant="118" id="00o-YD-PjZ"/>
                             <constraint firstItem="fzo-Wq-7PN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="2YT-Rd-cjj"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KoN-n0-529" secondAttribute="trailing" constant="56" id="3rg-MG-3gL"/>
                             <constraint firstItem="fzo-Wq-7PN" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="6K3-jV-MSj"/>
                             <constraint firstItem="Udg-wm-q2k" firstAttribute="top" secondItem="2Ql-Ue-ubV" secondAttribute="bottom" constant="32.670000000000002" id="9Ic-6z-Cqs"/>
                             <constraint firstItem="KoN-n0-529" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="76" id="GA5-My-Eat"/>
                             <constraint firstItem="Dzq-qv-rHi" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="2" id="N17-Cp-B4f"/>
                             <constraint firstItem="vK9-76-uGb" firstAttribute="centerY" secondItem="skK-KN-O0k" secondAttribute="centerY" id="P5y-L5-6vx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KoN-n0-529" secondAttribute="trailing" constant="49.670000000000002" id="WFK-aF-CLr"/>
                             <constraint firstItem="aHU-Db-3YB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Wq2-wH-Cq3"/>
                             <constraint firstItem="skK-KN-O0k" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="56" id="Y3N-cD-Dq8"/>
                             <constraint firstItem="aqJ-Oq-CM7" firstAttribute="top" secondItem="aHU-Db-3YB" secondAttribute="bottom" constant="34" id="YWM-a6-sw1"/>
@@ -148,7 +151,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

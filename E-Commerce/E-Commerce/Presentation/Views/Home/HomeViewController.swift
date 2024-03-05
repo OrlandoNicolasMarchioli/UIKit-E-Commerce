@@ -47,6 +47,10 @@ class HomeViewController: UIViewController {
         horizontalTableView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        configureEmptyFavoriteImageLabelAndCollection()
+    }
+    
     func checkIfFavoritesIsEmpty() -> Bool{
         return FavoriteManager.shared.getFavorites().count == 0
     }

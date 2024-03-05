@@ -126,7 +126,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate{
         cell.configure(product: productToBuy.product)
         cell.deleteItemButton.isHidden = false
         cell.itemTotal.isHidden = false
-        cell.itemTotal.text =  String(Int(productToBuy.quantity) * Int(productToBuy.product.price))
+        cell.itemTotal.text =  "$ " + String(Int(productToBuy.quantity) * Int(productToBuy.product.price))
         cell.itemPrice.isHidden = true
         cell.deleteItemButton.addTarget(self, action:#selector(deleteProduct(_:)), for: .touchUpInside)
         checkIfHasToBeEnabled()
