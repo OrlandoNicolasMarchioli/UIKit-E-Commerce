@@ -72,11 +72,7 @@ class DetailViewController: UIViewController{
     
     @IBAction func addToFavoriteButton(_ sender: Any) {
         changeStarButtonBackground()
-        if(starButtonIsFilled()){
-            FavoriteManager.shared.saveFavorite(product: self.product)
-        }else {
-            FavoriteManager.shared.deleteFavorite(product: self.product)
-        }
+        starButtonIsFilled() ? FavoriteManager.shared.saveFavorite(product: self.product) : FavoriteManager.shared.deleteFavorite(product: self.product)
     }
     
     private func showAlert(message: String) {
