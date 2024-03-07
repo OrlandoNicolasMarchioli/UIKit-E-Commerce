@@ -43,9 +43,9 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     func configure(product: Product){
-        self.itemName.text = "$ " + product.name
+        self.itemName.text = product.name
         self.itemTypeLabel.text = product.type
-        self.itemPrice.text = String(product.price)
+        self.itemPrice.text = "$ " + String(product.price)
         self.itemImage.image = imageForName(name: product.image)
     }
     

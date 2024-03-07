@@ -10,15 +10,18 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: HomeViewController IBOutlets
-    @IBOutlet weak var starButton: CustomButton!
     @IBOutlet weak var cartButton: CustomButton!
     @IBOutlet weak var horizontalTableView: UICollectionView!
     @IBOutlet weak var verticalTableView: UITableView!
+
+    @IBOutlet var dontHaveFavoritesLabel: UILabel!
+    @IBOutlet var favoritesEmptyImage: UIImageView!
     
     // MARK: HomeViewController variables
 
     let verticalCellSpacing: CGFloat = 70.0
     let collectionViewLayout = MyCellCollectionViewCellLayout()
+    var favorites: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +37,8 @@ class HomeViewController: UIViewController {
         verticalTableView.delegate = self
         
         cartButton.customButtonWithSystemImage(radius: 10, imageName: "cart")
-        starButton.customButtonWithSystemImage(radius: 10, imageName: "star")
+        
+        configureEmptyFavoriteImageLabelAndCollection()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +46,36 @@ class HomeViewController: UIViewController {
         verticalTableView.reloadData()
         horizontalTableView.reloadData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configureEmptyFavoriteImageLabelAndCollection()
+    }
+    
+    func checkIfFavoritesIsEmpty() -> Bool{
+        return FavoriteManager.shared.getFavorites().count == 0
+    }
+    
+    func setFavorites() -> Void{
+        self.favorites = FavoriteManager.shared.getFavorites()
+    }
+    
+    func configureEmptyFavoritesImage(){
+        self.favoritesEmptyImage.image = UIImage(systemName: "star.slash")
+    }
+    
+    func configureEmptyFavoriteImageLabelAndCollection(){
+        if(!checkIfFavoritesIsEmpty()){
+            self.favoritesEmptyImage.isHidden = true
+            self.dontHaveFavoritesLabel.isHidden = true
+            self.horizontalTableView.isHidden = false
+        }else{
+            self.favoritesEmptyImage.isHidden = false
+            self.dontHaveFavoritesLabel.isHidden = false
+            self.horizontalTableView.isHidden = true
+            configureEmptyFavoritesImage()
+        }
+    }
+    
 }
 
 // MARK: Home table view configuration
@@ -82,11 +116,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
 // MARK: Home collection view configuration
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ProductsRepository.shared.getProducts().count
+        return FavoriteManager.shared.getFavorites().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let product = ProductsRepository.shared.getProducts()[indexPath.row]
+        configureEmptyFavoriteImageLabelAndCollection()
+        let product = FavoriteManager.shared.getFavorites()[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? MyCellCollectionViewCell
         else {return UICollectionViewCell()}
         
@@ -99,7 +134,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedProduct = ProductsRepository.shared.getProducts()[indexPath.row]
+        let selectedProduct = FavoriteManager.shared.getFavorites()[indexPath.row]
         
         let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         detailVC.product = selectedProduct

@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WIp-ev-vA0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="WIp-ev-vA0">
                                 <rect key="frame" x="0.0" y="437" width="393" height="381"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="dX4-HF-Bad" customClass="HomeTableViewCell" customModule="E_Commerce" customModuleProvider="target">
@@ -46,20 +46,23 @@
                                     <segue destination="xMk-Ro-fEw" kind="show" id="Ljd-hU-ZXt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsj-Qw-H7t" customClass="CustomButton" customModule="E_Commerce" customModuleProvider="target">
-                                <rect key="frame" x="16" y="105" width="43" height="45"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEv-NN-Lzn">
+                                <rect key="frame" x="76.666666666666686" y="164" width="240" height="240"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="HwP-gY-bzd"/>
-                                    <constraint firstAttribute="width" constant="43" id="eHP-4U-sNM"/>
+                                    <constraint firstAttribute="width" constant="240" id="ULu-I3-duj"/>
+                                    <constraint firstAttribute="height" constant="240" id="gnQ-OY-oCi"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-Lg-OV3">
-                                <rect key="frame" x="0.0" y="155" width="393" height="274"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don´t have any favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72D-GB-9Tb">
+                                <rect key="frame" x="55.333333333333343" y="408" width="282.66666666666663" height="27"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jFd-Lg-OV3">
+                                <rect key="frame" x="0.0" y="160" width="393" height="274"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hSY-2P-2hP">
                                     <size key="itemSize" width="395" height="231"/>
@@ -70,7 +73,7 @@
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="bwH-4l-Nve">
                                         <rect key="frame" x="0.0" y="21.666666666666668" width="395" height="231"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eW6-Fj-IIt">
                                             <rect key="frame" x="0.0" y="0.0" width="395" height="231"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -83,19 +86,27 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zsj-Qw-H7t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="4Jj-5n-UnV"/>
-                            <constraint firstItem="Zsj-Qw-H7t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7TT-KY-4Zj"/>
+                            <constraint firstItem="jFd-Lg-OV3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5LG-cH-28C"/>
+                            <constraint firstItem="WIp-ev-vA0" firstAttribute="top" secondItem="jFd-Lg-OV3" secondAttribute="bottom" constant="3" id="Cvh-Ey-sRU"/>
+                            <constraint firstItem="72D-GB-9Tb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FZY-9s-4ki"/>
                             <constraint firstItem="aOi-C5-dCQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="HXQ-GM-Rdo"/>
+                            <constraint firstItem="lEv-NN-Lzn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NPa-3p-UuZ"/>
                             <constraint firstItem="aOi-C5-dCQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="NuU-yY-Mpc"/>
                             <constraint firstItem="aOi-C5-dCQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="2" id="Rmr-yD-akA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aOi-C5-dCQ" secondAttribute="trailing" constant="16" id="WBp-mk-Oo6"/>
+                            <constraint firstItem="jFd-Lg-OV3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dOM-q8-EVi"/>
+                            <constraint firstItem="jFd-Lg-OV3" firstAttribute="top" secondItem="aOi-C5-dCQ" secondAttribute="bottom" constant="12" id="dUP-7o-t5i"/>
+                            <constraint firstItem="WIp-ev-vA0" firstAttribute="top" secondItem="jFd-Lg-OV3" secondAttribute="bottom" constant="3" id="tpR-oA-5f9"/>
+                            <constraint firstItem="lEv-NN-Lzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="vH0-HZ-vrC"/>
+                            <constraint firstItem="72D-GB-9Tb" firstAttribute="top" secondItem="lEv-NN-Lzn" secondAttribute="bottom" constant="4" id="zHd-gc-RN9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BEa-7a-obT"/>
                     <connections>
                         <outlet property="cartButton" destination="aOi-C5-dCQ" id="S7v-o6-Zpe"/>
+                        <outlet property="dontHaveFavoritesLabel" destination="72D-GB-9Tb" id="aQD-WK-4zT"/>
+                        <outlet property="favoritesEmptyImage" destination="lEv-NN-Lzn" id="bqS-EL-rit"/>
                         <outlet property="horizontalTableView" destination="jFd-Lg-OV3" id="Ibd-jm-rFU"/>
-                        <outlet property="starButton" destination="Zsj-Qw-H7t" id="Lyn-eb-6Kx"/>
                         <outlet property="verticalTableView" destination="WIp-ev-vA0" id="js7-yX-gdo"/>
                     </connections>
                 </viewController>
@@ -134,13 +145,13 @@
     </scenes>
     <resources>
         <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
