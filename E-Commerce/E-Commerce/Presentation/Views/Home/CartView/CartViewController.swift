@@ -88,6 +88,13 @@ class CartViewController: UIViewController {
         self.itemTotal.text = "0"
         self.cartTableView.reloadData()
         checkIfHasToBeEnabled()
+        navigateToCartAccepted()
+    }
+    
+    func navigateToCartAccepted(){
+        let detailVC = UIStoryboard(name: "FinishViewController", bundle: nil).instantiateViewController(withIdentifier: "FinishViewController") as! FinishViewController
+        detailVC.productsBought = productsToBuy
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     
