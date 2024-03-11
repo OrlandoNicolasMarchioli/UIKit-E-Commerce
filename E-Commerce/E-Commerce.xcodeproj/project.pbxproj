@@ -28,6 +28,8 @@
 		529C7FE32B863E3E0017B7D1 /* FavoritesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C7FE22B863E3E0017B7D1 /* FavoritesDelegate.swift */; };
 		529E36C92B6991330041EA19 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 529E36C82B6991330041EA19 /* DetailViewController.storyboard */; };
 		529E36CB2B69A0D70041EA19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529E36CA2B69A0D70041EA19 /* DetailViewController.swift */; };
+		52B0EFF72B9A4EC400E5435F /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0EFF62B9A4EC400E5435F /* FinishViewController.swift */; };
+		52B0EFF92B9A4EF300E5435F /* FinishViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B0EFF82B9A4EF300E5435F /* FinishViewController.storyboard */; };
 		52B4C7AA2B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */; };
 		52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */; };
 		52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E96A702B31CBE10078E10A /* Colors.xcassets */; };
@@ -58,6 +60,8 @@
 		529C7FE22B863E3E0017B7D1 /* FavoritesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDelegate.swift; sourceTree = "<group>"; };
 		529E36C82B6991330041EA19 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		529E36CA2B69A0D70041EA19 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		52B0EFF62B9A4EC400E5435F /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		52B0EFF82B9A4EF300E5435F /* FinishViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinishViewController.storyboard; sourceTree = "<group>"; };
 		52B4C7A92B5AF8E3001F5B88 /* MyCellCollectionViewCellLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyCellCollectionViewCellLayout.swift; path = "E-Commerce/Presentation/Views/Home/HomeCollectionView/MyCellCollectionViewCellLayout.swift"; sourceTree = SOURCE_ROOT; };
 		52CEF4CE2B6965EF00E2D1D6 /* CartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CartViewController.storyboard; sourceTree = "<group>"; };
 		52E96A702B31CBE10078E10A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -218,9 +222,19 @@
 			path = DetailView;
 			sourceTree = "<group>";
 		};
+		52B0EFF42B9A4E4600E5435F /* FinishView */ = {
+			isa = PBXGroup;
+			children = (
+				52B0EFF62B9A4EC400E5435F /* FinishViewController.swift */,
+				52B0EFF82B9A4EF300E5435F /* FinishViewController.storyboard */,
+			);
+			path = FinishView;
+			sourceTree = "<group>";
+		};
 		52E07FAD2B35CDE3001808C3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				52B0EFF42B9A4E4600E5435F /* FinishView */,
 				524D582A2B8409C900D4E164 /* Button */,
 				529E36C72B6990B40041EA19 /* DetailView */,
 				520D85E02B61613E0088E554 /* CartView */,
@@ -313,6 +327,7 @@
 				529E36C92B6991330041EA19 /* DetailViewController.storyboard in Resources */,
 				521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */,
 				5272D5132B167D12004B565A /* LaunchScreen.storyboard in Resources */,
+				52B0EFF92B9A4EF300E5435F /* FinishViewController.storyboard in Resources */,
 				52E96A712B31CBE10078E10A /* Colors.xcassets in Resources */,
 				5272D5102B167D12004B565A /* Assets.xcassets in Resources */,
 				52CEF4CF2B6965EF00E2D1D6 /* CartViewController.storyboard in Resources */,
@@ -339,6 +354,7 @@
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				524D58272B839B6300D4E164 /* ProductsDelegate.swift in Sources */,
 				524D58292B839BCB00D4E164 /* ProductsRepository.swift in Sources */,
+				52B0EFF72B9A4EC400E5435F /* FinishViewController.swift in Sources */,
 				529C7FE12B863E050017B7D1 /* FavoriteManager.swift in Sources */,
 				5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */,
 				520D85E52B6161B10088E554 /* CartViewController.swift in Sources */,

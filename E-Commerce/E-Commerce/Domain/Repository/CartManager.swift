@@ -11,9 +11,15 @@ class CartManager: DetailViewControllerDelegate {
     
     static let shared = CartManager()
     var cartItems = [ProductToBuy]()
+    // This is always true because it doesn´r exists any payment API implemented
+    var cartApproved = true
     
     func getCartItems() -> [ProductToBuy] {
         return cartItems
+    }
+    
+    func getCartApproved() -> Bool{
+        return self.cartApproved
     }
     
     func deleteItemFromCart(product: ProductToBuy){
