@@ -21,12 +21,7 @@ class FinishViewController: UIViewController{
         finishOkButton.customButton(radius: 10)
     }
     @IBAction func finishOkButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true) {
-                if let homeVC = UIStoryboard(name: "HomeViewController", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
-                    homeVC.modalPresentationStyle = .fullScreen
-                    self.present(homeVC, animated: true, completion: nil)
-                }
-            }
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func configureCartApprobedImage(){
