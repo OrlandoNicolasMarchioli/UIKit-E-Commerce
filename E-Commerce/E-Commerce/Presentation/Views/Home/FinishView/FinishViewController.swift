@@ -12,7 +12,7 @@ class FinishViewController: UIViewController{
     
     @IBOutlet var finishImage: UIImageView!
     @IBOutlet var finishOkButton: CustomButton!
-    var cartStateApprobed = CartManager.shared.getCartApprobed()
+    var cartStateApproved = CartManager.shared.getCartApproved()
     var productsBought : [ProductToBuy] = []
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class FinishViewController: UIViewController{
     }
     
     func configureCartApprobedImage(){
-        if(cartStateApprobed){
+        if(cartStateApproved){
             self.finishImage.image = UIImage(named: "cartApprobed")
         }else{
             self.finishImage.image = UIImage(named: "buyProblem")
