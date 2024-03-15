@@ -11,6 +11,9 @@
 		520D85E52B6161B10088E554 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520D85E32B6161B10088E554 /* CartViewController.swift */; };
 		521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */; };
 		521853132B48575A001D64A7 /* MyCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */; };
+		5229EA7A2BA380E800D6D242 /* MongoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5229EA792BA380E800D6D242 /* MongoSwift */; };
+		5229EA7C2BA380E800D6D242 /* MongoSwiftSync in Frameworks */ = {isa = PBXBuildFile; productRef = 5229EA7B2BA380E800D6D242 /* MongoSwiftSync */; };
+		522B00402BA4941C00B447AB /* ProductApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522B003F2BA4941C00B447AB /* ProductApiProtocol.swift */; };
 		52466E522B755C61009C1C64 /* ProductToBuy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52466E512B755C61009C1C64 /* ProductToBuy.swift */; };
 		524D58272B839B6300D4E164 /* ProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D58262B839B6300D4E164 /* ProductsDelegate.swift */; };
 		524D58292B839BCB00D4E164 /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D58282B839BCB00D4E164 /* ProductsRepository.swift */; };
@@ -18,6 +21,10 @@
 		5267AA3C2B55B8210049F237 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */; };
 		5267AA3D2B55B8210049F237 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5267AA3B2B55B8210049F237 /* HomeTableViewCell.xib */; };
 		5267AA432B55CE4A0049F237 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267AA422B55CE4A0049F237 /* Product.swift */; };
+		527260D92BA228CD0009156A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 527260D82BA228CD0009156A /* Realm */; };
+		527260DB2BA228CD0009156A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 527260DA2BA228CD0009156A /* RealmSwift */; };
+		527260DD2BA231750009156A /* ProductToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527260DC2BA231750009156A /* ProductToSave.swift */; };
+		527260E02BA333200009156A /* MongoDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527260DF2BA333200009156A /* MongoDBManager.swift */; };
 		5272D5072B167D0C004B565A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D5062B167D0C004B565A /* AppDelegate.swift */; };
 		5272D5092B167D0C004B565A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D5082B167D0C004B565A /* SceneDelegate.swift */; };
 		5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5272D50A2B167D0C004B565A /* HomeViewController.swift */; };
@@ -41,6 +48,7 @@
 		520D85E32B6161B10088E554 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		521853102B48575A001D64A7 /* MyCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		521853112B48575A001D64A7 /* MyCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		522B003F2BA4941C00B447AB /* ProductApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductApiProtocol.swift; sourceTree = "<group>"; };
 		52466E512B755C61009C1C64 /* ProductToBuy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductToBuy.swift; sourceTree = "<group>"; };
 		524D58262B839B6300D4E164 /* ProductsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDelegate.swift; sourceTree = "<group>"; };
 		524D58282B839BCB00D4E164 /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
@@ -48,6 +56,8 @@
 		5267AA3A2B55B8210049F237 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		5267AA3B2B55B8210049F237 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		5267AA422B55CE4A0049F237 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		527260DC2BA231750009156A /* ProductToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductToSave.swift; sourceTree = "<group>"; };
+		527260DF2BA333200009156A /* MongoDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MongoDBManager.swift; sourceTree = "<group>"; };
 		5272D5032B167D0C004B565A /* E-Commerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Commerce.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5272D5062B167D0C004B565A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5272D5082B167D0C004B565A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5229EA7C2BA380E800D6D242 /* MongoSwiftSync in Frameworks */,
+				527260DB2BA228CD0009156A /* RealmSwift in Frameworks */,
+				527260D92BA228CD0009156A /* Realm in Frameworks */,
+				5229EA7A2BA380E800D6D242 /* MongoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +119,14 @@
 			path = HomeTableView;
 			sourceTree = "<group>";
 		};
+		527260DE2BA333040009156A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				527260DF2BA333200009156A /* MongoDBManager.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		5272D4FA2B167D0C004B565A = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,7 @@
 		5272D5052B167D0C004B565A /* E-Commerce */ = {
 			isa = PBXGroup;
 			children = (
+				527260DE2BA333040009156A /* Config */,
 				529B439B2B17A2BE00DA408A /* Assets */,
 				529B43962B17A28200DA408A /* Data */,
 				529B43952B17A27A00DA408A /* Domain */,
@@ -184,6 +207,7 @@
 			children = (
 				5267AA422B55CE4A0049F237 /* Product.swift */,
 				52466E512B755C61009C1C64 /* ProductToBuy.swift */,
+				527260DC2BA231750009156A /* ProductToSave.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,6 +215,7 @@
 		529B439A2B17A2B200DA408A /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				522B003F2BA4941C00B447AB /* ProductApiProtocol.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -282,6 +307,12 @@
 			dependencies = (
 			);
 			name = "E-Commerce";
+			packageProductDependencies = (
+				527260D82BA228CD0009156A /* Realm */,
+				527260DA2BA228CD0009156A /* RealmSwift */,
+				5229EA792BA380E800D6D242 /* MongoSwift */,
+				5229EA7B2BA380E800D6D242 /* MongoSwiftSync */,
+			);
 			productName = "E-Commerce";
 			productReference = 5272D5032B167D0C004B565A /* E-Commerce.app */;
 			productType = "com.apple.product-type.application";
@@ -310,6 +341,10 @@
 				Base,
 			);
 			mainGroup = 5272D4FA2B167D0C004B565A;
+			packageReferences = (
+				527260D72BA228CC0009156A /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5229EA782BA380E800D6D242 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */,
+			);
 			productRefGroup = 5272D5042B167D0C004B565A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,8 +386,11 @@
 				5272D50B2B167D0C004B565A /* HomeViewController.swift in Sources */,
 				52466E522B755C61009C1C64 /* ProductToBuy.swift in Sources */,
 				5202A5CE2B7278AE007A45C8 /* DetailViewControllerDelegate.swift in Sources */,
+				527260E02BA333200009156A /* MongoDBManager.swift in Sources */,
+				527260DD2BA231750009156A /* ProductToSave.swift in Sources */,
 				521853122B48575A001D64A7 /* MyCellCollectionViewCell.swift in Sources */,
 				524D58272B839B6300D4E164 /* ProductsDelegate.swift in Sources */,
+				522B00402BA4941C00B447AB /* ProductApiProtocol.swift in Sources */,
 				524D58292B839BCB00D4E164 /* ProductsRepository.swift in Sources */,
 				52B0EFF72B9A4EC400E5435F /* FinishViewController.swift in Sources */,
 				529C7FE12B863E050017B7D1 /* FavoriteManager.swift in Sources */,
@@ -512,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4426NK5D6;
+				DEVELOPMENT_TEAM = 37CGX9JX84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "E-Commerce/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -539,7 +577,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = D4426NK5D6;
+				DEVELOPMENT_TEAM = 37CGX9JX84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "E-Commerce/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -581,6 +619,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5229EA782BA380E800D6D242 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mongodb/mongo-swift-driver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		527260D72BA228CC0009156A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5229EA792BA380E800D6D242 /* MongoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5229EA782BA380E800D6D242 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwift;
+		};
+		5229EA7B2BA380E800D6D242 /* MongoSwiftSync */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5229EA782BA380E800D6D242 /* XCRemoteSwiftPackageReference "mongo-swift-driver" */;
+			productName = MongoSwiftSync;
+		};
+		527260D82BA228CD0009156A /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 527260D72BA228CC0009156A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		527260DA2BA228CD0009156A /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 527260D72BA228CC0009156A /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5272D4FB2B167D0C004B565A /* Project object */;
 }
